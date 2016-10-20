@@ -10,5 +10,7 @@ import java.util.List;
 public interface SubtitleDao {
 	void add( Subtitle subtitle ) throws DaoException;
 	List<Subtitle> lister() throws DaoException, BeanException;
+	List<String> videoNameLister() throws DaoException, BeanException;
+	List<String> tableNameLister() throws DaoException, BeanException;
 }
 

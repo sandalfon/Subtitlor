@@ -39,7 +39,7 @@ public class SubtitleDaoImpl implements SubtitleDao {
                 }
             } catch (SQLException e2) {
             }
-            throw new DaoException("Impossible de manipuler avec la base de données");
+            throw new DaoException("Impossible de manipuler avec la base de données :: subtitle");
         }
         finally {
             try {
@@ -47,7 +47,7 @@ public class SubtitleDaoImpl implements SubtitleDao {
                     connexion.close();  
                 }
             } catch (SQLException e) {
-                throw new DaoException("Impossible de communiquer avec la base de données");
+                throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
             }
         }
 
@@ -86,7 +86,7 @@ public class SubtitleDaoImpl implements SubtitleDao {
 				subtitles.add(subtitle);
 			}
 		} catch (SQLException e) {
-			throw new DaoException("Impossible de communiquer avec la base de données");
+			throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
 		}
 		finally {
 			try {
@@ -94,10 +94,65 @@ public class SubtitleDaoImpl implements SubtitleDao {
 					connexion.close();  
 				}
 			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données");
+				throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
 			}
 		}
 		return subtitles;
 	}
 
+	@Override
+	public List<String> videoNameLister() throws DaoException, BeanException {
+		List<String> videoNames = new ArrayList<String>();
+		Connection connexion = null;
+		Statement statement = null;
+		ResultSet result = null;
+		try {
+			connexion = daoFactory.getConnection();
+			statement = connexion.createStatement();
+			result = statement.executeQuery("SELECT name_video FROM subtitle_info;");
+			while (result.next()) {
+				String nameVideo = result.getString("name_video");
+				videoNames.add(nameVideo);
+			}
+		} catch (SQLException e) {
+			throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
+		}
+		finally {
+			try {
+				if (connexion != null) {
+					connexion.close();  
+				}
+			} catch (SQLException e) {
+				throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
+			}
+		}
+		return videoNames;
+	}
+
+	
+	public List<String> tableNameLister() throws DaoException, BeanException {
+		List<String> tableNames = new ArrayList<String>();
+		Connection connexion = null;
+		ResultSet result = null;
+		try {
+			connexion = daoFactory.getConnection();
+			DatabaseMetaData md = connexion.getMetaData();
+			result = md.getTables(null, null, "%", null);
+			while (result.next()) {
+				tableNames.add(result.getString(3));
+			}
+		} catch (SQLException e) {
+			throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
+		}
+		finally {
+			try {
+				if (connexion != null) {
+					connexion.close();  
+				}
+			} catch (SQLException e) {
+				throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
+			}
+		}
+		return tableNames;
+	}
 }

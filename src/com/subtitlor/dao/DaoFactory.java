@@ -39,6 +39,11 @@ public class DaoFactory {
 		return new SubtitleDaoImpl(this);
 	}
 
+	public SubtitleContentDao getSubtitleContentDao() throws DaoException {
+		// TODO Auto-generated method stub
+		return  new SubtitleContentDaoImpl(this);
+	}
+
 	//    public SubtitleContentDao getSubtitleContentDao() {
 	//        return new SubtitleContentDaoImpl(this);
 	//    }

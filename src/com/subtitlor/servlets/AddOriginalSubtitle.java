@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.subtitlor.beans.Subtitle;
 import com.subtitlor.dao.DaoException;
 import com.subtitlor.dao.DaoFactory;
+import com.subtitlor.dao.SubtitleContentDao;
 import com.subtitlor.dao.SubtitleDao;
 import com.subtitlor.form.AddOriginalSubtitleForm;
 
@@ -20,11 +21,12 @@ import com.subtitlor.form.AddOriginalSubtitleForm;
 public class AddOriginalSubtitle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private SubtitleDao subtitleDao;
-
+	private SubtitleContentDao subtitleContentDao;
 	public void init() throws ServletException {
 		DaoFactory daoFactory = DaoFactory.getInstance();
 		try {
 			this.subtitleDao = daoFactory.getSubtitleDao();
+			this.subtitleContentDao=daoFactory.getSubtitleContentDao();
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -52,9 +54,9 @@ public class AddOriginalSubtitle extends HttpServlet {
 			AddOriginalSubtitleForm addOriginalSubtitleForm = new AddOriginalSubtitleForm();
 			addOriginalSubtitleForm.initAddOriginalArguments(request);
 			Subtitle subtitle = addOriginalSubtitleForm.getSubtitle();
+			subtitleContentDao.createTable(subtitle);
 			subtitleDao.add(subtitle);
-			System.out.println(subtitle.getName());
-			//            Utilisateur utilisateur = new Utilisateur();
+						//            Utilisateur utilisateur = new Utilisateur();
 			//            utilisateur.setNom(request.getParameter("nom"));
 			//            utilisateur.setPrenom(request.getParameter("prenom"));
 			//            

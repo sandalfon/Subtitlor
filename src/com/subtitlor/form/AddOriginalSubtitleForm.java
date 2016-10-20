@@ -14,67 +14,81 @@ import javax.servlet.http.Part;
 
 import com.subtitlor.beans.BeanException;
 import com.subtitlor.beans.Subtitle;
+import com.subtitlor.dao.DaoException;
+import com.subtitlor.dao.DaoFactory;
+import com.subtitlor.dao.SubtitleDao;
 
 public class AddOriginalSubtitleForm {
 	private Subtitle subtitle;
 	public static final String FILE_PATH = "F:/Perso/workspace/Subtitlor/WebContent/Upload"; // A changer   
 	public static final int BUFFER_SIZE = 10240;
-	public void initAddOriginalArguments(HttpServletRequest request) throws FormException, BeanException, IOException, ServletException{
-		
-			subtitle= new Subtitle();
-			String name = request.getParameter("name");
-
-			String nameVideo = request.getParameter("nameVideo");
-			if(request.getParameter("finish").equals("yes")){
-				subtitle.setFinished(true);
-			}
-			else{
-				subtitle.setFinished(false);
-			}
-			String language = request.getParameter("language");
-
-			if( language == null){
-				throw new FormException("Erreur langue non défini");
-			}else{
-				subtitle.setLanguage(language);
-			}
-			if( nameVideo == null){
-				throw new FormException("Erreur nom de la video non défini");
-			}else{
-				subtitle.setNameVideo(nameVideo);
-			}
-			
-			String tableName = generateTableName(nameVideo)+"_"+language;
-			subtitle.setTableName(tableName);
-			if( name == null){
-				throw new FormException("Erruer nom non défini");
-			}else{
-				subtitle.setName(name);
-			}
-			
-			subtitle.setVo(true);
-
-			// On récupère le champ du fichier
-			Part part = request.getPart("file");
-
-			// On vérifie qu'on a bien reçu un fichier
-			String fileName = getFileName(part);
-
-			// Si on a bien un fichier
-			if (fileName != null && !fileName.isEmpty()) {
-				String nomChamp = part.getName();
-				// Corrige un bug du fonctionnement d'Internet Explorer
-				fileName = fileName.substring(fileName.lastIndexOf('/') + 1)
-						.substring(fileName.lastIndexOf('\\') + 1);
-
-				// On écrit définitivement le fichier sur le disque
-				writeFile(part, fileName, FILE_PATH);
-
-				request.setAttribute(nomChamp, fileName);
-			}
 
 
 	
+
+	public void initAddOriginalArguments(HttpServletRequest request) throws FormException, BeanException, IOException, ServletException, DaoException{
+		DaoFactory daoFactory = DaoFactory.getInstance();
+		SubtitleDao subtitleDao = daoFactory.getSubtitleDao();
+		
+		subtitle= new Subtitle();
+		String name = request.getParameter("name");
+		subtitleDao.videoNameLister();
+				String nameVideo = request.getParameter("nameVideo");
+		if(request.getParameter("finish").equals("yes")){
+			subtitle.setFinished(true);
+		}
+		else{
+			subtitle.setFinished(false);
+		}
+		String language = request.getParameter("language");
+
+		if( language == null){
+			throw new FormException("Erreur langue non défini");
+		}else{
+			subtitle.setLanguage(language);
+		}
+		if( nameVideo == null){
+			throw new FormException("Erreur nom de la video non défini");
+		}else{
+			for(String videoNameRef : subtitleDao.videoNameLister()){
+				if(videoNameRef.trim().contains(nameVideo)){
+					throw new FormException("Erreur nom de la video déjà présent");
+				}
+			}
+			subtitle.setNameVideo(nameVideo);
+		}
+
+		String tableName = generateTableName(nameVideo)+"_"+language;
+		subtitle.setTableName(tableName);
+		if( name == null){
+			throw new FormException("Erruer nom non défini");
+		}else{
+			subtitle.setName(name);
+		}
+
+		subtitle.setVo(true);
+
+		// On récupère le champ du fichier
+		Part part = request.getPart("file");
+
+		// On vérifie qu'on a bien reçu un fichier
+		String fileName = getFileName(part);
+
+		// Si on a bien un fichier
+		if (fileName != null && !fileName.isEmpty()) {
+			String nomChamp = part.getName();
+			// Corrige un bug du fonctionnement d'Internet Explorer
+			fileName = fileName.substring(fileName.lastIndexOf('/') + 1)
+					.substring(fileName.lastIndexOf('\\') + 1);
+
+			// On écrit définitivement le fichier sur le disque
+			writeFile(part, fileName, FILE_PATH);
+
+			request.setAttribute(nomChamp, fileName);
+		}
+
+
+
 
 
 	}
@@ -116,14 +130,14 @@ public class AddOriginalSubtitleForm {
 		}
 		return null;
 	}
-	
+
 	private static String generateTableName(String name){
-	    String sampleAlphabet = name.replaceAll("[^A-Za-z]+", "");
-	    Random random = new Random();
-	    char[] buf = new char[12];
-	    for (int i = 0 ; i < 12 ; i++)
-	        buf[i] = sampleAlphabet.charAt(random.nextInt(sampleAlphabet.length()));
-	    return new String(buf);
+		String sampleAlphabet = name.replaceAll("[^A-Za-z]+", "").toLowerCase();
+		Random random = new Random();
+		char[] buf = new char[12];
+		for (int i = 0 ; i < 12 ; i++)
+			buf[i] = sampleAlphabet.charAt(random.nextInt(sampleAlphabet.length()));
+		return new String(buf);
 	}
 
 }
