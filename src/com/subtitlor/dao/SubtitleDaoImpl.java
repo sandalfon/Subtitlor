@@ -1,158 +1,106 @@
 package com.subtitlor.dao;
 
-import java.sql.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import com.subtitlor.beans.BeanException;
 import com.subtitlor.beans.Subtitle;
 
 public class SubtitleDaoImpl implements SubtitleDao {
 	private DaoFactory daoFactory;
 
-	SubtitleDaoImpl(DaoFactory daoFactory) throws DaoException {
+	SubtitleDaoImpl(DaoFactory daoFactory)  throws DaoException {
 		this.daoFactory = daoFactory;
 	}
 
-	@Override
-	public void add(Subtitle subtitle) throws DaoException {
-		Connection connexion = null;
-		PreparedStatement preparedStatement = null;
-
+	public Subtitle generateSubtitleFromfile( String fileName){
+		BufferedReader br=null;
+		int stage=0;
+		int index=-1;
+		Subtitle subtitle =new Subtitle();
+		List<Integer> ids = new ArrayList<Integer>();
+		Map<Integer, String> timeStart = new HashMap<Integer, String>();
+		Map<Integer, String> timeStop = new HashMap<Integer, String>();
+		Map<Integer, String> linesContent = new HashMap<Integer, String>();
 		try {
-			connexion = daoFactory.getConnection();
-            preparedStatement = connexion.prepareStatement("INSERT INTO subtitle_info(name, name_video,vo,finished,language,table_name) VALUES(?, ?,?,?,?,?);");
-            preparedStatement.setString(1, subtitle.getName());
-            preparedStatement.setString(2, subtitle.getNameVideo());
-            preparedStatement.setBoolean(3, subtitle.isVo());
-            preparedStatement.setBoolean(4, subtitle.isFinished());
-            preparedStatement.setString(5, subtitle.getLanguage());
-            preparedStatement.setString(6, subtitle.getTableName());
-            preparedStatement.executeUpdate();
-            connexion.commit();
-			
-			
-		} catch (SQLException e) {
-            try {
-                if (connexion != null) {
-                    connexion.rollback();
-                }
-            } catch (SQLException e2) {
-            }
-            throw new DaoException("Impossible de manipuler avec la base de données :: subtitle");
-        }
-        finally {
-            try {
-                if (connexion != null) {
-                    connexion.close();  
-                }
-            } catch (SQLException e) {
-                throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
-            }
-        }
+			br = new BufferedReader(new FileReader(fileName));
+			String line;
+			String tmpLineContent="";
+			while ((line = br.readLine()) != null) {
+				switch(stage){
+				case 0:
 
-	}
+					index=Integer.parseInt(line);
+					ids.add(index);
+					stage=1;
+					break;
+				case 1:
+					String[] times=line.split(" --> ");
+					timeStart.put(index, times[0]);
+					timeStop.put(index, times[1]);
+					stage=2;
+					break;
+				case 2:
+					if(line.trim().isEmpty()){
+						
+						linesContent.put(index, tmpLineContent.substring(1, tmpLineContent.length()));
+						tmpLineContent="";
+						stage=0;
+					}else{
+						tmpLineContent=tmpLineContent+'\n'+line;
+					}
 
-	@Override
-	public List<Subtitle> lister() throws DaoException, BeanException {
-		List<Subtitle> subtitles = new ArrayList<Subtitle>();
-		Connection connexion = null;
-		Statement statement = null;
-		ResultSet result = null;
-
-		try {
-			connexion = daoFactory.getConnection();
-			statement = connexion.createStatement();
-			result = statement.executeQuery("SELECT * FROM subtitle_info;");
-
-			while (result.next()) {
-				int id = result.getInt("ID");
-				String name = result.getString("name");
-				String nameVideo = result.getString("name_video");
-				boolean vo = result.getBoolean("vo");
-				boolean finished =result.getBoolean("finish");
-				String language = result.getString("language");
-				String tableName =result.getString("table_name");
-
-				Subtitle subtitle = new Subtitle();
-				subtitle.setFinished(finished);	
-				subtitle.setId(id);
-				subtitle.setLanguage(language);
-				subtitle.setName(name);
-				subtitle.setNameVideo(nameVideo);
-				subtitle.setTableName(tableName);
-				subtitle.setVo(vo);
-
-				subtitles.add(subtitle);
-			}
-		} catch (SQLException e) {
-			throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
-		}
-		finally {
-			try {
-				if (connexion != null) {
-					connexion.close();  
+					break;
 				}
-			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
-			}
-		}
-		return subtitles;
-	}
 
-	@Override
-	public List<String> videoNameLister() throws DaoException, BeanException {
-		List<String> videoNames = new ArrayList<String>();
-		Connection connexion = null;
-		Statement statement = null;
-		ResultSet result = null;
-		try {
-			connexion = daoFactory.getConnection();
-			statement = connexion.createStatement();
-			result = statement.executeQuery("SELECT name_video FROM subtitle_info;");
-			while (result.next()) {
-				String nameVideo = result.getString("name_video");
-				videoNames.add(nameVideo);
 			}
-		} catch (SQLException e) {
-			throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
-		}
-		finally {
+			//ajout du dernier text des sous-titres.
+			linesContent.put(index, tmpLineContent.substring(1, tmpLineContent.length()));
+			subtitle.setIds(ids);
+			subtitle.setLinesContent(linesContent);
+			subtitle.setTimeStart(timeStart);
+			subtitle.setTimeStop(timeStop);
+
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
 			try {
-				if (connexion != null) {
-					connexion.close();  
-				}
-			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
+				// fermer le buffer 
+				br.close();
+
+			} catch (Exception e) {
 			}
 		}
-		return videoNames;
+		return(subtitle);
 	}
 
+
+
+	public void writeString(Subtitle subtitle, String fileName){
+		BufferedWriter writer = null;
+		try {
+			File subFile = new File(fileName);
+			System.out.println(subFile.getCanonicalPath());
+			writer = new BufferedWriter(new FileWriter(subFile));
+			writer.write(subtitle.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				// fermer le buffer 
+				writer.close();
+			} catch (Exception e) {
+			}
+		}
+	}
 	
-	public List<String> tableNameLister() throws DaoException, BeanException {
-		List<String> tableNames = new ArrayList<String>();
-		Connection connexion = null;
-		ResultSet result = null;
-		try {
-			connexion = daoFactory.getConnection();
-			DatabaseMetaData md = connexion.getMetaData();
-			result = md.getTables(null, null, "%", null);
-			while (result.next()) {
-				tableNames.add(result.getString(3));
-			}
-		} catch (SQLException e) {
-			throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
-		}
-		finally {
-			try {
-				if (connexion != null) {
-					connexion.close();  
-				}
-			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitle");
-			}
-		}
-		return tableNames;
-	}
+	
 }

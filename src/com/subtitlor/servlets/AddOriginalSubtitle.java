@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.subtitlor.beans.Subtitle;
+import com.subtitlor.beans.SubtitleInfo;
 import com.subtitlor.dao.DaoException;
 import com.subtitlor.dao.DaoFactory;
 import com.subtitlor.dao.SubtitleContentDao;
-import com.subtitlor.dao.SubtitleDao;
+import com.subtitlor.dao.SubtitleInfoDao;
 import com.subtitlor.form.AddOriginalSubtitleForm;
 
 /**
@@ -20,12 +20,12 @@ import com.subtitlor.form.AddOriginalSubtitleForm;
 @WebServlet("/AddNewOriginalSubtitle")
 public class AddOriginalSubtitle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private SubtitleDao subtitleDao;
+	private SubtitleInfoDao subtitleInfoDao;
 	private SubtitleContentDao subtitleContentDao;
 	public void init() throws ServletException {
 		DaoFactory daoFactory = DaoFactory.getInstance();
 		try {
-			this.subtitleDao = daoFactory.getSubtitleDao();
+			this.subtitleInfoDao = daoFactory.getSubtitleInfoDao();
 			this.subtitleContentDao=daoFactory.getSubtitleContentDao();
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
@@ -53,15 +53,7 @@ public class AddOriginalSubtitle extends HttpServlet {
 
 			AddOriginalSubtitleForm addOriginalSubtitleForm = new AddOriginalSubtitleForm();
 			addOriginalSubtitleForm.initAddOriginalArguments(request);
-			Subtitle subtitle = addOriginalSubtitleForm.getSubtitle();
-			subtitleContentDao.createTable(subtitle);
-			subtitleDao.add(subtitle);
-						//            Utilisateur utilisateur = new Utilisateur();
-			//            utilisateur.setNom(request.getParameter("nom"));
-			//            utilisateur.setPrenom(request.getParameter("prenom"));
-			//            
-			//            utilisateurDao.ajouter(utilisateur);
-			//            request.setAttribute("utilisateurs", utilisateurDao.lister());
+			this.getServletContext().getRequestDispatcher("/WEB-INF/acceuil.jsp").forward(request, response);
 		}
 		catch (Exception e) {
 			request.setAttribute("erreur", e.getMessage());

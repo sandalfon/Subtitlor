@@ -6,6 +6,7 @@
 <title>Ajout d'un titre original</title>
 </head>
 <body>
+ <%@ include file="../menu.jsp" %>
 	<c:if test="${ !empty erreur }">
 		<p style="color: red;">
 			<c:out value="${ erreur }" />
@@ -45,7 +46,7 @@
 		<p>
 		<p>
             <label for="file">Fichier à envoyer : </label>
-            <input type="file" name="file" id="file" />
+            <input type="file" name="file" id="file" accept=".srt"/>
         </p>
 		</p>
 		<input type="submit" />

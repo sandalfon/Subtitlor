@@ -1,11 +1,7 @@
 package com.subtitlor.form;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Random;
 
 
 import javax.servlet.ServletException;
@@ -14,130 +10,123 @@ import javax.servlet.http.Part;
 
 import com.subtitlor.beans.BeanException;
 import com.subtitlor.beans.Subtitle;
+import com.subtitlor.beans.SubtitleContent;
+import com.subtitlor.beans.SubtitleInfo;
 import com.subtitlor.dao.DaoException;
 import com.subtitlor.dao.DaoFactory;
+import com.subtitlor.dao.SubtitleContentDao;
+import com.subtitlor.dao.SubtitleInfoDao;
 import com.subtitlor.dao.SubtitleDao;
-
 public class AddOriginalSubtitleForm {
-	private Subtitle subtitle;
-	public static final String FILE_PATH = "F:/Perso/workspace/Subtitlor/WebContent/Upload"; // A changer   
-	public static final int BUFFER_SIZE = 10240;
+	private SubtitleInfo subtitleInfo;
+	private SubtitleContent subtitleContent;
 
 
-	
+
 
 	public void initAddOriginalArguments(HttpServletRequest request) throws FormException, BeanException, IOException, ServletException, DaoException{
 		DaoFactory daoFactory = DaoFactory.getInstance();
+		SubtitleInfoDao subtitleInfoDao = daoFactory.getSubtitleInfoDao();
 		SubtitleDao subtitleDao = daoFactory.getSubtitleDao();
-		
-		subtitle= new Subtitle();
+		SubtitleContentDao subtitleContentDao = daoFactory.getSubtitleContentDao();
+		subtitleInfo= new SubtitleInfo();
 		String name = request.getParameter("name");
-		subtitleDao.videoNameLister();
-				String nameVideo = request.getParameter("nameVideo");
-		if(request.getParameter("finish").equals("yes")){
-			subtitle.setFinished(true);
-		}
-		else{
-			subtitle.setFinished(false);
-		}
+		subtitleInfoDao.videoNameLister();
+		String nameVideo = request.getParameter("nameVideo");
 		String language = request.getParameter("language");
-
-		if( language == null){
-			throw new FormException("Erreur langue non défini");
-		}else{
-			subtitle.setLanguage(language);
+		subtitleInfo.setVo(language);
+		switch(language){
+		case "en":
+			if(request.getParameter("finish").equals("yes")){
+				subtitleInfo.setFinishedEn(true);
+			}
+			else{
+				subtitleInfo.setFinishedEn(false);
+			}
+			subtitleInfo.setNameEn(name);
+			break;
+		case "fr":
+			if(request.getParameter("finish").equals("yes")){
+				subtitleInfo.setFinishedFr(true);
+			}
+			else{
+				subtitleInfo.setFinishedFr(false);
+			}
+			subtitleInfo.setNameFr(name);
+			break;
+		case "al":
+			if(request.getParameter("finish").equals("yes")){
+				subtitleInfo.setFinishedAl(true);
+			}
+			else{
+				subtitleInfo.setFinishedAl(false);
+			}
+			subtitleInfo.setNameAl(name);
+			break;
+		case "es":
+			if(request.getParameter("finish").equals("yes")){
+				subtitleInfo.setFinishedEs(true);
+			}
+			else{
+				subtitleInfo.setFinishedEs(false);
+			}
+			subtitleInfo.setNameEs(name);
+			break;
+		case "pt":
+			if(request.getParameter("finish").equals("yes")){
+				subtitleInfo.setFinishedPt(true);
+			}
+			else{
+				subtitleInfo.setFinishedPt(false);
+			}
+			subtitleInfo.setNameEn(name);
+			break;
 		}
+		
 		if( nameVideo == null){
 			throw new FormException("Erreur nom de la video non défini");
 		}else{
-			for(String videoNameRef : subtitleDao.videoNameLister()){
+			for(String videoNameRef : subtitleInfoDao.videoNameLister()){
 				if(videoNameRef.trim().contains(nameVideo)){
 					throw new FormException("Erreur nom de la video déjà présent");
 				}
 			}
-			subtitle.setNameVideo(nameVideo);
+			subtitleInfo.setNameVideo(nameVideo);
 		}
 
-		String tableName = generateTableName(nameVideo)+"_"+language;
-		subtitle.setTableName(tableName);
-		if( name == null){
-			throw new FormException("Erruer nom non défini");
-		}else{
-			subtitle.setName(name);
-		}
-
-		subtitle.setVo(true);
-
+		String tableName = subtitleInfoDao.generateTableName(nameVideo)+"_"+language;
+		subtitleInfo.setTableName(tableName);
+		
+		
+		subtitleContentDao.createTable(subtitleInfo);
+		subtitleInfoDao.add(subtitleInfo);
 		// On récupère le champ du fichier
 		Part part = request.getPart("file");
-
-		// On vérifie qu'on a bien reçu un fichier
-		String fileName = getFileName(part);
-
-		// Si on a bien un fichier
-		if (fileName != null && !fileName.isEmpty()) {
-			String nomChamp = part.getName();
-			// Corrige un bug du fonctionnement d'Internet Explorer
-			fileName = fileName.substring(fileName.lastIndexOf('/') + 1)
-					.substring(fileName.lastIndexOf('\\') + 1);
-
-			// On écrit définitivement le fichier sur le disque
-			writeFile(part, fileName, FILE_PATH);
-
-			request.setAttribute(nomChamp, fileName);
-		}
-
-
-
-
+		String filePathAndName=subtitleInfoDao.managePart(part);
+		Subtitle subtitle= subtitleDao.generateSubtitleFromfile(filePathAndName);
+		System.out.println("start sub");
+		System.out.println(subtitle.getTimeStart().toString());
+		subtitleContent = new SubtitleContent();
+		subtitleContent.makeSubtitleContentFromOriginal(subtitleInfo, subtitle);
+		subtitleContentDao.persistSubtitleContent(subtitleContent);
 
 	}
+			
+		
 
-	public Subtitle getSubtitle(){
 
-		return subtitle;
+
+
+
+	
+
+	public SubtitleInfo getSubtitleInfo(){
+
+		return subtitleInfo;
 	}
 
-	private void writeFile( Part part, String fileName, String path ) throws IOException {
-		BufferedInputStream input = null;
-		BufferedOutputStream output = null;
-		try {
-			input = new BufferedInputStream(part.getInputStream(), BUFFER_SIZE);
-			output = new BufferedOutputStream(new FileOutputStream(new File(path + fileName)), BUFFER_SIZE);
+	
 
-			byte[] buffer = new byte[BUFFER_SIZE];
-			int length;
-			while ((length = input.read(buffer)) > 0) {
-				output.write(buffer, 0, length);
-			}
-		} finally {
-			try {
-				output.close();
-			} catch (IOException ignore) {
-			}
-			try {
-				input.close();
-			} catch (IOException ignore) {
-			}
-		}
-	}
 
-	private static String getFileName( Part part ) {
-		for ( String contentDisposition : part.getHeader( "content-disposition" ).split( ";" ) ) {
-			if ( contentDisposition.trim().startsWith( "filename" ) ) {
-				return contentDisposition.substring( contentDisposition.indexOf( '=' ) + 1 ).trim().replace( "\"", "" );
-			}
-		}
-		return null;
-	}
-
-	private static String generateTableName(String name){
-		String sampleAlphabet = name.replaceAll("[^A-Za-z]+", "").toLowerCase();
-		Random random = new Random();
-		char[] buf = new char[12];
-		for (int i = 0 ; i < 12 ; i++)
-			buf[i] = sampleAlphabet.charAt(random.nextInt(sampleAlphabet.length()));
-		return new String(buf);
-	}
 
 }

@@ -35,15 +35,17 @@ public class DaoFactory {
 	}
 
 	// R�cup�ration du Dao
-	public SubtitleDao getSubtitleDao() throws DaoException {
-		return new SubtitleDaoImpl(this);
+	public SubtitleInfoDao getSubtitleInfoDao() throws DaoException {
+		return new SubtitleInfoDaoImpl(this);
 	}
 
 	public SubtitleContentDao getSubtitleContentDao() throws DaoException {
-		// TODO Auto-generated method stub
 		return  new SubtitleContentDaoImpl(this);
 	}
-
+	public SubtitleDao getSubtitleDao() throws DaoException {
+		// TODO Auto-generated method stub
+		return  new SubtitleDaoImpl(this);
+	}
 	//    public SubtitleContentDao getSubtitleContentDao() {
 	//        return new SubtitleContentDaoImpl(this);
 	//    }
