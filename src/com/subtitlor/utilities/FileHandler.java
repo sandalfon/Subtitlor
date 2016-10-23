@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.servlet.http.Part;
 
 public class FileHandler {
-	public static final String FILE_PATH = "F:/Perso/workspace/Subtitlor/WebContent/Upload/data"; // A changer   
+	public static final String FILE_PATH = "E:/workspace/Subtitlor/WebContent/Upload/data"; // A changer   
 	public static final int BUFFER_SIZE = 10240;
 
 	public static String  writeFile( Part part, String fileName ) throws IOException {

@@ -4,31 +4,31 @@ public class SubtitleInfo {
 	//id unique de la BD
 	private int id;
 	//nom de la video associ�e aux sous titre
-	private String nameVideo;
+	private String nameVideo="";
 	//nom du sous titre anglais
-	private String nameEn;
+	private String nameEn="";
 	//statu de l'�dition du sous-titre anglais
-	private boolean finishedEn;
+	private boolean finishedEn=false;
 	//nom du sous titre français
-	private String nameFr;
+	private String nameFr="";
 	//statu de l'�dition du sous-titre français
-	private boolean finishedFr;
+	private boolean finishedFr=false;
 	//nom du sous titre allemand
-	private String nameAl;
+	private String nameAl="";
 	//statu de l'�dition du sous-titre Allemand
-	private boolean finishedAl;
+	private boolean finishedAl=false;
 	//nom du sous titre espagnol
-	private String nameEs;
+	private String nameEs="";
 	//statu de l'�dition du sous-titre espagnol
-	private boolean finishedEs;
+	private boolean finishedEs=false;
 	//nom du sous titre protugais
-	private String namePt;
+	private String namePt="";
 	//statu de l'�dition du sous-titre protugais
-	private boolean finishedPt;
+	private boolean finishedPt=false;
 	//nom de la table contenant les sous titres
-	private String tableName;
+	private String tableName="";
 	//tag de la langue des sous-titres originaux
-	private String vo;
+	private String vo="";
 
 
 	public String getNameEn() {
@@ -37,9 +37,6 @@ public class SubtitleInfo {
 	public void setNameEn(String nameEn) throws BeanException {
 		if (nameEn.length() > 50) {
 			throw new BeanException("Le nom est trop grand ! (50 caractères maximum)");
-		}
-		if (nameEn.length() < 4) {
-			throw new BeanException("Le nom est trop petit ! (5 caractères minimum)");
 		}
 		else {
 			this.nameEn = nameEn;
@@ -59,9 +56,6 @@ public class SubtitleInfo {
 		if (nameFr.length() > 50) {
 			throw new BeanException("Le nom est trop grand ! (50 caractères maximum)");
 		}
-		if (nameFr.length() < 4) {
-			throw new BeanException("Le nom est trop petit ! (5 caractères minimum)");
-		}
 		else {
 			this.nameFr = nameFr;
 		}
@@ -78,9 +72,6 @@ public class SubtitleInfo {
 	public void setNameAl(String nameAl) throws BeanException {
 		if (nameAl.length() > 50) {
 			throw new BeanException("Le nom est trop grand ! (50 caractères maximum)");
-		}
-		if (nameAl.length() < 4) {
-			throw new BeanException("Le nom est trop petit ! (5 caractères minimum)");
 		}
 		else {
 			this.nameAl = nameAl;
@@ -99,9 +90,6 @@ public class SubtitleInfo {
 		if (nameEs.length() > 50) {
 			throw new BeanException("Le nom est trop grand ! (50 caractères maximum)");
 		}
-		if (nameEs.length() < 4) {
-			throw new BeanException("Le nom est trop petit ! (5 caractères minimum)");
-		}
 		else {
 			this.nameEs = nameEs;
 		}
@@ -119,9 +107,7 @@ public class SubtitleInfo {
 		if (namePt.length() > 50) {
 			throw new BeanException("Le nom est trop grand ! (50 caractères maximum)");
 		}
-		if (namePt.length() < 4) {
-			throw new BeanException("Le nom est trop petit ! (5 caractères minimum)");
-		}
+		
 		else {
 			this.namePt = namePt;
 		}

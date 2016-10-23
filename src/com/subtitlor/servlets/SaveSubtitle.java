@@ -8,17 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ShowSubtitlor
+ * Servlet implementation class SaveSubtitle
  */
-@WebServlet("/ShowSubtitlor")
-public class ShowSubtitlor extends HttpServlet {
+@WebServlet("/SaveSubtitle")
+public class SaveSubtitle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ShowSubtitlor() {
+    public SaveSubtitle() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 	/**

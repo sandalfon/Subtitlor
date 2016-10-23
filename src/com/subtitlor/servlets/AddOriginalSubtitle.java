@@ -50,15 +50,16 @@ public class AddOriginalSubtitle extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-
 			AddOriginalSubtitleForm addOriginalSubtitleForm = new AddOriginalSubtitleForm();
 			addOriginalSubtitleForm.initAddOriginalArguments(request);
-			this.getServletContext().getRequestDispatcher("/WEB-INF/acceuil.jsp").forward(request, response);
+			//this.getServletContext().getRequestDispatcher("/WEB-INF/subtitle/add_original_subtitle.jsp").forward(request, response);
 		}
 		catch (Exception e) {
 			request.setAttribute("erreur", e.getMessage());
 		}
 		this.getServletContext().getRequestDispatcher("/WEB-INF/subtitle/add_original_subtitle.jsp").forward(request, response);
+		
+		//this.getServletContext().getRequestDispatcher("/WEB-INF/subtitle/add_original_subtitle.jsp").forward(request, response);
 	}
 
 }
