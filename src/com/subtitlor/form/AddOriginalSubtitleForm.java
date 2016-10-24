@@ -1,9 +1,6 @@
 package com.subtitlor.form;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
@@ -25,7 +22,7 @@ public class AddOriginalSubtitleForm {
 	private SubtitleDao subtitleDao;
 	private SubtitleInfoDao subtitleInfoDao;
 	private DaoFactory daoFactory;
-	
+
 	public void initAddOriginalArguments(HttpServletRequest request) throws FormException, BeanException, IOException, ServletException, DaoException{
 		daoFactory = DaoFactory.getInstance();
 		subtitleInfoDao = daoFactory.getSubtitleInfoDao();
@@ -93,7 +90,7 @@ public class AddOriginalSubtitleForm {
 			}
 			subtitleInfo.setNameVideo(nameVideo);
 		}
-		
+
 		String tableName = subtitleInfoDao.generateTableName(nameVideo)+"_"+language;
 		subtitleInfo.setTableName(tableName);
 		subtitleContentDao.createTable(subtitleInfo);
@@ -108,12 +105,6 @@ public class AddOriginalSubtitleForm {
 
 
 	}
-
-
-
-
-
-
 
 
 

@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.subtitlor.beans.BeanException;
 import com.subtitlor.beans.SubtitleContent;
@@ -21,40 +22,35 @@ public class ShowSubtitleForm {
 
 	public HttpServletRequest dispacher(HttpServletRequest request) throws DaoException, BeanException{
 		String jspName="/WEB-INF/subtitle/show_subtitle.jsp";
+		HttpSession session=request.getSession();
 		request.setAttribute("jspName",jspName);
 		String button= request.getParameter("selectedButton");
 		System.out.println(button);
 		String[] buttonValues=button.split("_");
 		String action=buttonValues[0];
 		String languageTarget=buttonValues[1];
-		String languageRef;
 		int subtitlenfoId= Integer.parseInt(buttonValues[2]);
 		System.out.println(languageTarget+" "+action+" "+subtitlenfoId);
+		daoFactory=DaoFactory.getInstance();
+		subtitleInfoDao=daoFactory.getSubtitleInfoDao();
+		subtitleContentDao=daoFactory.getSubtitleContentDao();
 		switch(action){
 		case "dl":
 			break;
 		case "edit":
+			EditSubtitleForm editSubtitleForm = new EditSubtitleForm();
+			request=editSubtitleForm.genereateSubtitlesRequest(request,languageTarget,subtitlenfoId);
 			jspName="/WEB-INF/subtitle/edit_subtitle.jsp";
-			daoFactory=DaoFactory.getInstance();
-			subtitleInfoDao=daoFactory.getSubtitleInfoDao();
-			subtitleContentDao=daoFactory.getSubtitleContentDao();
-			SubtitleInfo subtitleInfo =subtitleInfoDao.getSubtitleInfoFromId(subtitlenfoId);
-			SubtitleContent subtitleContent =subtitleContentDao.getSubtitleContentFromTable( subtitleInfo.getTableName());
-			languageRef=subtitleInfo.getVo();
-			request.setAttribute("videoName", subtitleInfo.getNameVideo());
-			request.setAttribute("nameRef", subtitleInfoDao.getNameFromLanguage(subtitleInfo, languageRef));
-			request.setAttribute("nameTarget", subtitleInfoDao.getNameFromLanguage(subtitleInfo, languageTarget));
-			request.setAttribute("subtitleRef", subtitleContentDao.getSubtitleFromLanguage(subtitleContent, languageRef));
-			request.setAttribute("subtitleTarget", subtitleContentDao.getSubtitleFromLanguage(subtitleContent, languageTarget));
-			request.setAttribute("ids", subtitleContent.getIds());
+			session.setAttribute("languageTarget", languageTarget);
+			session.setAttribute("subtitlenfoId",subtitlenfoId);
 			request.setAttribute("jspName",jspName);
 			break;
 		}
 		return request;
 	}
-	
-	
 
-	 
-	
+
+
+
+
 }

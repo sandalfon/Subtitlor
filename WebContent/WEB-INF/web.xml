@@ -47,6 +47,14 @@
     <servlet-name>ShowSubtitle</servlet-name>
     <url-pattern>/subtitles</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <servlet-name>SaveSubtitle</servlet-name>
+    <servlet-class>com.subtitlor.servlets.SaveSubtitle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveSubtitle</servlet-name>
+    <url-pattern>/saved</url-pattern>
+  </servlet-mapping>
   <jsp-config>
     <jsp-property-group>
       <url-pattern>*.jsp</url-pattern>

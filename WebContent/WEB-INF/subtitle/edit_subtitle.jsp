@@ -7,7 +7,7 @@
 <body>
 	<%@ include file="../menu.jsp"%>
 	<p><c:out value="${videoName}"/></p>
-	<form method="post" action="saveSubtitles">
+	<form method="post" action="saved">
 	<p><input type="submit" style="position: fixed; top: 10px; right: 10px;" name="save" /> </p>
 	<label 	style="position: fixed; top: 40px; right: 10px;"> Etat du travail</label><br>
 	<p><input type="radio" name="finish" value="yes" 

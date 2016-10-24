@@ -223,7 +223,6 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 			preparedStatement = connexion.prepareStatement("SELECT * FROM subtitle_info Where id= ?;");
 			preparedStatement.setInt(1, id);
 			result = preparedStatement.executeQuery();
-
 			while (result.next()) {
 
 				String nameVideo = result.getString("name_video");
@@ -286,9 +285,115 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 		case "pt":
 			return subtitleInfo.getNamePt();
 		default: return null;
-		
+
 		}
-		
+
+	}
+
+	@Override
+	public String getNameFromIdLanguage(int id, String language) throws DaoException {
+
+		Connection connexion = null;
+		Statement statement = null;
+		ResultSet result = null;
+		PreparedStatement preparedStatement = null;
+		String name=null;
+		try {
+			connexion = daoFactory.getConnection();
+			statement = connexion.createStatement();
+			switch(language){
+			case "en":
+				preparedStatement = connexion.prepareStatement("SELECT name_en as name FROM subtitle_info Where id= ?;");
+				break;
+			case "fr":
+				preparedStatement = connexion.prepareStatement("SELECT name_fr as name FROM subtitle_info Where id= ?;");
+				break;
+			case "al":
+				preparedStatement = connexion.prepareStatement("SELECT name_al as name FROM subtitle_info Where id= ?;");
+				break;
+			case "es":
+				preparedStatement = connexion.prepareStatement("SELECT name_es as name FROM subtitle_info Where id= ?;");
+				break;
+			case "pt":
+				preparedStatement = connexion.prepareStatement("SELECT name_pt as name FROM subtitle_info Where id= ?;");
+				break;
+			}
+
+			preparedStatement.setInt(1, id);
+			result = preparedStatement.executeQuery();
+
+			while (result.next()) {
+
+				name = result.getString("name");
+			}
+
+
+		} catch (SQLException e) {
+			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo List");
+		}
+		finally {
+			try {
+				if (connexion != null) {
+					connexion.close();  
+				}
+			} catch (SQLException e) {
+				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo List");
+			}
+		}
+		return name;
+	}
+
+	@Override
+	public void updateNameFromIdLanguage(int id, String name, String language) throws DaoException {
+		Connection connexion = null;
+		PreparedStatement preparedStatement = null;
+		try {
+			connexion = daoFactory.getConnection();
+			switch(language){
+			case "en":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET name_en=? Where ID= ?;");
+				break;
+			case "fr":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET name_fr=? Where ID= ?;");
+				break;
+			case "al":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET name_al=? Where ID= ?;");
+				break;
+			case "es":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET name_es=? Where ID= ?;");
+				break;
+			case "pt":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET name_pt=? Where ID= ?;");
+				break;
+			}
+
+
+			preparedStatement.setString(1, name);
+			preparedStatement.setInt(2, id);
+			System.out.println(preparedStatement);
+			preparedStatement.executeUpdate();
+			connexion.commit();
+
+
+		} catch (SQLException e) {
+			try {
+				if (connexion != null) {
+					connexion.rollback();
+				}
+			} catch (SQLException e2) {
+			}
+			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo add");
+		}
+		finally {
+			try {
+				if (connexion != null) {
+					connexion.close();  
+				}
+			} catch (SQLException e) {
+				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo add");
+			}
+		}
+
 	}
 
 }
