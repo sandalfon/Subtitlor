@@ -14,7 +14,6 @@ public class FileHandler {
 
 	public static String  writeFile( Part part, String fileName ) throws IOException {
 		if (fileName != null && !fileName.isEmpty()) {
-			String nomChamp = part.getName();
 			// Corrige un bug du fonctionnement d'Internet Explorer
 			fileName = fileName.substring(fileName.lastIndexOf('/') + 1)
 					.substring(fileName.lastIndexOf('\\') + 1);

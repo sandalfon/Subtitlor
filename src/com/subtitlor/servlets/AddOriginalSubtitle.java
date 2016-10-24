@@ -6,8 +6,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.subtitlor.beans.SubtitleInfo;
 import com.subtitlor.dao.DaoException;
 import com.subtitlor.dao.DaoFactory;
 import com.subtitlor.dao.SubtitleContentDao;
@@ -22,11 +20,14 @@ public class AddOriginalSubtitle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private SubtitleInfoDao subtitleInfoDao;
 	private SubtitleContentDao subtitleContentDao;
+	
 	public void init() throws ServletException {
 		DaoFactory daoFactory = DaoFactory.getInstance();
+		subtitleContentDao=null;
+		subtitleInfoDao=null;
 		try {
-			this.subtitleInfoDao = daoFactory.getSubtitleInfoDao();
-			this.subtitleContentDao=daoFactory.getSubtitleContentDao();
+			subtitleInfoDao = daoFactory.getSubtitleInfoDao();
+			subtitleContentDao=daoFactory.getSubtitleContentDao();
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -50,10 +51,8 @@ public class AddOriginalSubtitle extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-
 			AddOriginalSubtitleForm addOriginalSubtitleForm = new AddOriginalSubtitleForm();
 			addOriginalSubtitleForm.initAddOriginalArguments(request);
-			this.getServletContext().getRequestDispatcher("/WEB-INF/acceuil.jsp").forward(request, response);
 		}
 		catch (Exception e) {
 			request.setAttribute("erreur", e.getMessage());

@@ -1,9 +1,6 @@
 package com.subtitlor.form;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
@@ -20,21 +17,22 @@ import com.subtitlor.dao.SubtitleDao;
 public class AddOriginalSubtitleForm {
 	private SubtitleInfo subtitleInfo;
 	private SubtitleContent subtitleContent;
-
-
-
+	private Subtitle subtitle;
+	private SubtitleContentDao subtitleContentDao;
+	private SubtitleDao subtitleDao;
+	private SubtitleInfoDao subtitleInfoDao;
+	private DaoFactory daoFactory;
 
 	public void initAddOriginalArguments(HttpServletRequest request) throws FormException, BeanException, IOException, ServletException, DaoException{
-		DaoFactory daoFactory = DaoFactory.getInstance();
-		SubtitleInfoDao subtitleInfoDao = daoFactory.getSubtitleInfoDao();
-		SubtitleDao subtitleDao = daoFactory.getSubtitleDao();
-		SubtitleContentDao subtitleContentDao = daoFactory.getSubtitleContentDao();
+		daoFactory = DaoFactory.getInstance();
+		subtitleInfoDao = daoFactory.getSubtitleInfoDao();
+		subtitleDao = daoFactory.getSubtitleDao();
+		subtitleContentDao = daoFactory.getSubtitleContentDao();
 		subtitleInfo= new SubtitleInfo();
 		String name = request.getParameter("name");
-		subtitleInfoDao.videoNameLister();
 		String nameVideo = request.getParameter("nameVideo");
-		String language = request.getParameter("language");
-		subtitleInfo.setVo(language);
+		String language = request.getParameter("language").toLowerCase();
+		subtitleInfo.setVo(language.toLowerCase());
 		switch(language){
 		case "en":
 			if(request.getParameter("finish").equals("yes")){
@@ -79,10 +77,9 @@ public class AddOriginalSubtitleForm {
 			else{
 				subtitleInfo.setFinishedPt(false);
 			}
-			subtitleInfo.setNameEn(name);
+			subtitleInfo.setNamePt(name);
 			break;
 		}
-		
 		if( nameVideo == null){
 			throw new FormException("Erreur nom de la video non défini");
 		}else{
@@ -96,36 +93,27 @@ public class AddOriginalSubtitleForm {
 
 		String tableName = subtitleInfoDao.generateTableName(nameVideo)+"_"+language;
 		subtitleInfo.setTableName(tableName);
-		
-		
 		subtitleContentDao.createTable(subtitleInfo);
-		subtitleInfoDao.add(subtitleInfo);
 		// On récupère le champ du fichier
 		Part part = request.getPart("file");
 		String filePathAndName=subtitleInfoDao.managePart(part);
-		Subtitle subtitle= subtitleDao.generateSubtitleFromfile(filePathAndName);
-		System.out.println("start sub");
-		System.out.println(subtitle.getTimeStart().toString());
+		subtitle= subtitleDao.generateSubtitleFromfile(filePathAndName);
+		subtitleInfoDao.persistSubtitleInfo(subtitleInfo);
 		subtitleContent = new SubtitleContent();
 		subtitleContent.makeSubtitleContentFromOriginal(subtitleInfo, subtitle);
 		subtitleContentDao.persistSubtitleContent(subtitleContent);
 
+
 	}
-			
-		
 
 
-
-
-
-	
 
 	public SubtitleInfo getSubtitleInfo(){
 
 		return subtitleInfo;
 	}
 
-	
+
 
 
 
