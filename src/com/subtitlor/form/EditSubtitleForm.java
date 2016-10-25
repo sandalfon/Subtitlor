@@ -1,5 +1,9 @@
 package com.subtitlor.form;
 
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -15,31 +19,89 @@ public class EditSubtitleForm {
 	private DaoFactory daoFactory;
 	private SubtitleInfoDao subtitleInfoDao;
 	private SubtitleContentDao subtitleContentDao;
+	private int subtitlenfoId;
+	private String languageTarget;
+	private String tableName;
 
-	public void updateSubtitles(HttpServletRequest request) throws DaoException, BeanException{
+	public void updateSubtitles(HttpServletRequest request) throws DaoException, BeanException, SQLException{
+		HttpSession session=request.getSession();
+		subtitlenfoId= (int) session.getAttribute("subtitlenfoId");
+		languageTarget=(String) session.getAttribute("languageTarget");;
 		daoFactory=DaoFactory.getInstance();
 		subtitleInfoDao=daoFactory.getSubtitleInfoDao();
 		subtitleContentDao=daoFactory.getSubtitleContentDao();
-		HttpSession session=request.getSession();
-		int subtitlenfoId= (int) session.getAttribute("subtitlenfoId");
-		String languageTarget=(String) session.getAttribute("languageTarget");
-		updateName(subtitlenfoId,(String)session.getAttribute("nameTarget"),languageTarget);
+		tableName=(String)request.getSession().getAttribute("tableName");
+		updateName(request.getParameter("nameTarget"));
+		updateFinish(request.getParameter("finish"));
+		updateSubtitleLines(request);
+		//		for(String name  : request.getParameterMap().keySet()){
+		//			System.out.println(name+" "+request.getParameter(name));
+		//		}
+		System.out.println(tableName);
 	}
 
-	public void updateName(int id , String name, String language) throws DaoException{
+	public void updateFinish(String status) throws DaoException{
+		Boolean state=false;
+		if(status.equals("yes")){
+			state=true;
+		}
+		subtitleInfoDao.updateFinishFromIdLanguage(subtitlenfoId,state,languageTarget);
+	}
+
+
+	public void updateName( String name) throws DaoException{
 		if(!name.equals("non défini")){
-			String refName=subtitleInfoDao.getNameFromIdLanguage(id,language);
+			String refName=subtitleInfoDao.getNameFromIdLanguage(subtitlenfoId,languageTarget);
 			if(!name.equals(refName)){
-				subtitleInfoDao.updateNameFromIdLanguage(id,name,language);
+				subtitleInfoDao.updateNameFromIdLanguage(subtitlenfoId,name,languageTarget);
 			}
 		}
 	}
 
-	public void  updateLines(){
+	public void  updateSubtitleLines(HttpServletRequest  request) throws DaoException, SQLException{
+		SubtitleContent subtitleContent= subtitleContentDao.getSubtitleContentFromTable(tableName);
+		Map<Integer,String> oriSubtitles=subtitleContentDao.getSubtitleFromLanguage(subtitleContent,languageTarget);
+		String[] splitStr;
+		int id;
+		String oriSubtitle;
+		String newSubtitle;
+		for(String name  : request.getParameterMap().keySet()){
+			if(name.startsWith("subTarget_")){
+				splitStr=name.split("_");
+				id=Integer.parseInt(splitStr[1]);
+				oriSubtitle=oriSubtitles.get(Integer.parseInt(splitStr[1]));
+				newSubtitle=request.getParameter(name);
+				if(oriSubtitle!=null){
+					if(newSubtitle!= null){
 
+						if(!newSubtitle.equals(oriSubtitle)){
+							System.out.println(oriSubtitle+" différent de "+oriSubtitle);
+							subtitleContentDao.persistLine(tableName,languageTarget,id,newSubtitle);
+						}
+					}
+				}
+				else{
+					if(newSubtitle!= null){
+						System.out.println(" null remplacé par "+newSubtitle);
+						subtitleContentDao.persistLine(tableName,languageTarget,id,newSubtitle);
+
+					}
+				}
+
+
+			}
+
+		}
+		
 	}
-	public void  updateFinish(){
 
+	public Map<Integer,String> parseSubtitleLines(HttpServletRequest request){
+		Map<Integer,String> newSubtitles = new HashMap<Integer, String>();
+		//		for(String name  : request.getParameterMap().keySet()){
+		//			System.out.println(name+" "+request.getParameter(name));
+		//			
+		//		}
+		return newSubtitles;
 	}
 
 	public HttpServletRequest genereateSubtitlesRequest(HttpServletRequest request,String languageTarget, int subtitlenfoId) throws DaoException, BeanException {
@@ -60,6 +122,7 @@ public class EditSubtitleForm {
 		request.setAttribute("ids", subtitleContent.getIds());
 		request.setAttribute("subtitlenfoId",subtitlenfoId);
 		request.getSession().setAttribute("nameTarget",nameTarget);
+		request.getSession().setAttribute("tableName",subtitleInfo.getTableName());
 		return request;
 	}
 

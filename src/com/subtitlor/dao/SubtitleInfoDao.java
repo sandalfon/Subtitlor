@@ -22,5 +22,6 @@ public interface SubtitleInfoDao {
 	String getNameFromLanguage(SubtitleInfo subtitleInfo,String language);
 	String getNameFromIdLanguage(int id, String language) throws DaoException;
 	void updateNameFromIdLanguage(int id, String name, String language) throws DaoException;
+	void updateFinishFromIdLanguage(int subtitlenfoId, Boolean state, String languageTarget) throws DaoException;
 }
 

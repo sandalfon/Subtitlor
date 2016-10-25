@@ -97,14 +97,14 @@ public class SubtitleContentDaoImpl implements SubtitleContentDao{
 		List<Integer> ids = subtitleContent.getIds();
 		String tableName=subtitleContent.getTableName();
 		String queryAddIndexAndTime="INSERT INTO "+tableName+"(id,start,end) VALUES (?,?,?);";
-		
-		
+
+
 		try {
 			connexion = daoFactory.getConnection();
 			for(int indexMap : ids){
-				
+
 				if(!listOfIds.contains(indexMap)){
-					
+
 					preparedStatement = connexion.prepareStatement(queryAddIndexAndTime);
 					preparedStatement.setInt(1, indexMap);
 					preparedStatement.setString(2, starts.get(indexMap));
@@ -117,30 +117,30 @@ public class SubtitleContentDaoImpl implements SubtitleContentDao{
 				if(ens.keySet().contains(indexMap)){
 					preparedStatement=updateSubtitle(connexion, tableName, "en", indexMap, ens);
 					preparedStatement.executeUpdate();
-					
+
 				}
 				if(frs.keySet().contains(indexMap)){
 					preparedStatement=updateSubtitle(connexion, tableName, "fr", indexMap, frs);
 					preparedStatement.executeUpdate();
-					
+
 				}
 				if(als.keySet().contains(indexMap)){
 					preparedStatement=updateSubtitle(connexion, tableName, "al", indexMap, als);
 					preparedStatement.executeUpdate();
-					
+
 				}
 				if(ess.keySet().contains(indexMap)){
 					preparedStatement=updateSubtitle(connexion, tableName, "es", indexMap, ess);
 					preparedStatement.executeUpdate();
-					
+
 				}
 				if(pts.keySet().contains(indexMap)){
 					preparedStatement=updateSubtitle(connexion, tableName, "pt", indexMap, pts);
 					preparedStatement.executeUpdate();
-					
+
 				}
-				
-				
+
+
 			}
 			connexion.commit();
 
@@ -198,35 +198,35 @@ public class SubtitleContentDaoImpl implements SubtitleContentDao{
 
 	}
 	private PreparedStatement updateSubtitle( Connection connexion,  String tableName, String tagLang,  int index, Map<Integer,String> map) throws SQLException{
-		
+
 		String queryAddSub="Update "+tableName+" SET "+tagLang+"=? where id=?;";
 		PreparedStatement preparedStatement = connexion.prepareStatement(queryAddSub);
 		preparedStatement.setString(1, map.get(index));
 		preparedStatement.setInt(2, index);
-		 return preparedStatement;
+		return preparedStatement;
 
 	}
-	
+
 	public List<SubtitleContent> lister(){
-		
+
 		return null;
-		
+
 	}
-	
+
 	public SubtitleContent getSubtitleContentFromTable(String tableName) throws DaoException{
 		SubtitleContent subtitleContent = new SubtitleContent();
 		Connection connexion = null;
 		Statement statement = null;
 		ResultSet result = null;
-		 List<Integer> ids=new ArrayList<Integer>();
-		 Map<Integer, String> timeStarts=new HashMap<Integer, String>();
-		 Map<Integer, String> timeStops=new HashMap<Integer, String>();
-		 Map<Integer, String> frs=new HashMap<Integer, String>();
-		 Map<Integer, String> ens=new HashMap<Integer, String>();
-		 Map<Integer, String> als=new HashMap<Integer, String>();
-		 Map<Integer, String> ess=new HashMap<Integer, String>();
-		 Map<Integer, String> pts=new HashMap<Integer, String>();
-		 int id;
+		List<Integer> ids=new ArrayList<Integer>();
+		Map<Integer, String> timeStarts=new HashMap<Integer, String>();
+		Map<Integer, String> timeStops=new HashMap<Integer, String>();
+		Map<Integer, String> frs=new HashMap<Integer, String>();
+		Map<Integer, String> ens=new HashMap<Integer, String>();
+		Map<Integer, String> als=new HashMap<Integer, String>();
+		Map<Integer, String> ess=new HashMap<Integer, String>();
+		Map<Integer, String> pts=new HashMap<Integer, String>();
+		int id;
 		try {
 			connexion = daoFactory.getConnection();
 			statement = connexion.createStatement();
@@ -269,7 +269,7 @@ public class SubtitleContentDaoImpl implements SubtitleContentDao{
 			}
 		}
 		return subtitleContent;
-		
+
 	}
 
 	@Override
@@ -286,9 +286,34 @@ public class SubtitleContentDaoImpl implements SubtitleContentDao{
 		case "pt":
 			return subtitleContent.getPts();
 		default: return null;
-		
+
 		}
 	}
+	public void persistLine(String tableName, String languageTarget, int id,String line) throws SQLException, DaoException{
+		Connection connexion = null;
+		PreparedStatement preparedStatement = null;
 
+		String queryAddIndexAndTime="Update  "+tableName+" set "+languageTarget+"=? where id= ?;";
+		try {
+			connexion = daoFactory.getConnection();
+			preparedStatement = connexion.prepareStatement(queryAddIndexAndTime);
+			preparedStatement.setInt(2, id);
+			preparedStatement.setString(1, line);
+			System.out.println(preparedStatement);
+			preparedStatement.executeUpdate();
+			connexion.commit();
+		} catch (SQLException e) {
+			throw new DaoException("Impossible de communiquer avec la base de données :: subtitleContent");
+		}
+		finally {
+			try {
+				if (connexion != null) {
+					connexion.close();  
+				}
+			} catch (SQLException e) {
+				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleContent");
+			}
+		}
+	}
 
 }

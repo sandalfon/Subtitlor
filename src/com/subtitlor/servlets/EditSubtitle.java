@@ -1,7 +1,7 @@
 package com.subtitlor.servlets;
 
 import java.io.IOException;
-
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,14 +23,9 @@ public class EditSubtitle extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		EditSubtitleForm editSubtitleForm =new EditSubtitleForm();
-		System.out.println("edit sub : "+(String)request.getAttribute("language"));
-		System.out.println("test "+request.getAttribute("test"));
 		try {
-			System.out.println("att : "+request.getAttribute("newNameTarget"));
-			System.out.println("param : "+request.getParameter("newNameTarget"));
-			request.getSession().setAttribute("targetName",request.getAttribute("nameTarget"));
 			editSubtitleForm.updateSubtitles(request);
-		} catch (DaoException | BeanException e) {
+		} catch (DaoException | BeanException | SQLException e) {
 			request.setAttribute("erreur", e.getMessage());
 		}
 		this.getServletContext().getRequestDispatcher("/WEB-INF/subtitle/show_subtitle.jsp").forward(request, response);

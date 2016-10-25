@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.subtitlor.beans.Subtitle;
+import com.subtitlor.beans.SubtitleContent;
 
 public class SubtitleDaoImpl implements SubtitleDao {
 	private DaoFactory daoFactory;
@@ -100,6 +101,12 @@ public class SubtitleDaoImpl implements SubtitleDao {
 			} catch (Exception e) {
 			}
 		}
+	}
+
+	@Override
+	public Subtitle getSubtitleFromSubtitleContent(SubtitleContent subtitleContent, String language) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

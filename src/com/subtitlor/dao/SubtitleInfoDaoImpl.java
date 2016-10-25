@@ -395,5 +395,56 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 		}
 
 	}
+	
+	public void updateFinishFromIdLanguage(int id, Boolean state, String language)throws DaoException {
+		Connection connexion = null;
+		PreparedStatement preparedStatement = null;
+		try {
+			connexion = daoFactory.getConnection();
+			switch(language){
+			case "en":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET finished_en=? Where ID= ?;");
+				break;
+			case "fr":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET finished_fr=? Where ID= ?;");
+				break;
+			case "al":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET finished_al=? Where ID= ?;");
+				break;
+			case "es":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET finished_es=? Where ID= ?;");
+				break;
+			case "pt":
+				preparedStatement = connexion.prepareStatement("Update subtitle_info SET finished_pt=? Where ID= ?;");
+				break;
+			}
 
+
+			preparedStatement.setBoolean(1, state);
+			preparedStatement.setInt(2, id);
+			System.out.println(preparedStatement);
+			preparedStatement.executeUpdate();
+			connexion.commit();
+
+
+		} catch (SQLException e) {
+			try {
+				if (connexion != null) {
+					connexion.rollback();
+				}
+			} catch (SQLException e2) {
+			}
+			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo add");
+		}
+		finally {
+			try {
+				if (connexion != null) {
+					connexion.close();  
+				}
+			} catch (SQLException e) {
+				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo add");
+			}
+		}
+
+	}
 }

@@ -1,6 +1,7 @@
 package com.subtitlor.dao;
 
 import java.util.Map;
+import java.sql.SQLException;
 import java.util.List;
 
 import com.subtitlor.beans.BeanException;
@@ -17,6 +18,7 @@ public interface SubtitleContentDao {
 	List<SubtitleContent>lister() throws DaoException;
 	SubtitleContent getSubtitleContentFromTable(String table) throws DaoException;
 	Map<Integer,String> getSubtitleFromLanguage(SubtitleContent subtitleContent,String language);
+	void persistLine(String tableName, String languageTarget, int id,String line) throws DaoException, SQLException;
 }
 
 
