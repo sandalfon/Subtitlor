@@ -34,19 +34,20 @@ public class DaoFactory {
 
 	}
 
-	// R�cup�ration du Dao
+	// Récupération des daos
+	//Information sur les sous-titres
 	public SubtitleInfoDao getSubtitleInfoDao() throws DaoException {
 		return new SubtitleInfoDaoImpl(this);
 	}
 
-	public SubtitleContentDao getSubtitleContentDao() throws DaoException {
-		return  new SubtitleContentDaoImpl(this);
+	// sous titre multilangue
+	public SubtitleMultiLanguageDao getSubtitleContentDao() throws DaoException {
+		return  new SubtitleMultiLanguageDaoImpl(this);
 	}
+	
+	//sous titre mono langue
 	public SubtitleDao getSubtitleDao() throws DaoException {
-		// TODO Auto-generated method stub
 		return  new SubtitleDaoImpl(this);
 	}
-	//    public SubtitleContentDao getSubtitleContentDao() {
-	//        return new SubtitleContentDaoImpl(this);
-	//    }
+
 }

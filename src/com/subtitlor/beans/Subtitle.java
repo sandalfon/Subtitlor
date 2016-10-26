@@ -5,15 +5,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+// classe  de gestion simplifié d'un sous-titre
 public class Subtitle {
+	//Identifiants du format str
 	private List<Integer> ids = new ArrayList<Integer>();
+	//temps début au format str
 	private Map<Integer, String> timeStart = new HashMap<Integer, String>();
+	//temps fin au format str
 	private Map<Integer, String> timeStop = new HashMap<Integer, String>();
+	//lignes de suous titres au format str
 	private Map<Integer, String> linesContent = new HashMap<Integer, String>();
 
-	
-
+	//Getters et setters
 	public List<Integer> getIds() {
 		return ids;
 	}
@@ -54,26 +57,29 @@ public class Subtitle {
 	}
 
 
+	//génération d'un bloc sous titre au froamt str (id ; temps; text)
 	public String generateBlocTextFromId(int id){
 		String result="";
 		if(id>=ids.size())
 			return result;
-		result=result+ids.get(id)+'\n';
-		result=result+timeStart.get(id)+" --> "+timeStop.get(id);
-		result=result+linesContent.get(id);
+		int idRef=ids.get(id);
+		result=result+idRef+'\n';
+		result=result+timeStart.get(idRef)+" --> "+timeStop.get(idRef)+"\n";
+		result=result+linesContent.get(idRef);
 		return result;
 	}
 
 
+	//génération de l'ensemble de l'objet sous-titre  en text au format str
 	public String toString(){
 		String result="";
 		int maxSize=ids.size();
 		for(int i=0;i<maxSize;i++){
 			result=result+generateBlocTextFromId(i)+"\n\n";
 		}
-		result.substring(0,result.length()-1);
+		result.substring(0,result.length());
 		return result;
 	}
 
-	
+
 }

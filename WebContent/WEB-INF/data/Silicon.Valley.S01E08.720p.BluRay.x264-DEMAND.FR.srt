@@ -1,0 +1,2303 @@
+1
+00:00:07,600 --> 00:00:10,320
+<i>Je vais te tuer, fils de pute !</i>
+
+2
+00:00:10,440 --> 00:00:11,715
+<i>Mon œil !</i>
+
+3
+00:00:12,600 --> 00:00:16,913
+C'est au nom de la conférence Disrupt
+que je vous présente des excuses
+
+4
+00:00:17,120 --> 00:00:19,430
+pour ce qui s'est produit
+cet après-midi.
+
+5
+00:00:19,600 --> 00:00:22,559
+Cet homme ne fera plus jamais
+partie du jury.
+
+6
+00:00:22,840 --> 00:00:26,117
+Je viens d'apprendre
+qu'Oracle l'a mis à la porte.
+
+7
+00:00:26,280 --> 00:00:27,555
+Sa femme l'aurait quitté.
+
+8
+00:00:28,040 --> 00:00:32,319
+Cela étant dit, j'ai eu un appel
+de votre avocat, M. LaFlamme,
+
+9
+00:00:32,440 --> 00:00:33,954
+m'informant
+
+10
+00:00:34,120 --> 00:00:37,796
+que, selon lui, cet incident
+est passible... de poursuites.
+
+11
+00:00:38,160 --> 00:00:42,040
+En plus de tenir le TechCrunch
+responsable des dégâts engendrés,
+
+12
+00:00:42,200 --> 00:00:45,034
+dont la perte potentielle
+pour Pied Piper
+
+13
+00:00:45,200 --> 00:00:47,954
+de revenus et actions
+s'élevant à plusieurs milliards,
+
+14
+00:00:48,080 --> 00:00:51,039
+il pourrait m'impliquer
+personnellement
+
+15
+00:00:51,200 --> 00:00:52,793
+s'il y avait un procès.
+
+16
+00:00:52,960 --> 00:00:55,031
+J'aimerais donc vous proposer
+
+17
+00:00:55,240 --> 00:00:59,200
+de mettre cet incident derrière nous,
+d'un point de vue juridique,
+
+18
+00:00:59,960 --> 00:01:04,637
+en envoyant Pied Piper directement
+en finale de la bataille des start-up
+
+19
+00:01:04,800 --> 00:01:07,998
+où vous serez en lice
+pour le grand prix.
+
+20
+00:01:08,400 --> 00:01:09,834
+Qu'en dites-vous ?
+
+21
+00:01:10,000 --> 00:01:12,037
+- Je crois que...
+- Une question.
+
+22
+00:01:12,640 --> 00:01:15,155
+Ça concerne nos chambres d'hôtel.
+
+23
+00:01:22,680 --> 00:01:24,319
+J'ai pas raison, les gars ?
+
+24
+00:01:26,280 --> 00:01:28,715
+J'étais content
+qu'on t'ait explosé la tête.
+
+25
+00:01:28,880 --> 00:01:32,840
+Là, je suis super content.
+C'est comme si j'avais gagné 2 fois.
+
+26
+00:01:33,000 --> 00:01:35,356
+Ça va disrupter
+dans la salle de bain.
+
+27
+00:01:37,200 --> 00:01:40,557
+C'est pas un canapé-lit.
+Je vais leur demander un lit de camp.
+
+28
+00:01:40,720 --> 00:01:42,279
+Mais de rien, les gars.
+
+29
+00:01:42,400 --> 00:01:45,359
+J'ai dû baiser une femme mariée
+et j'ai pris un coup,
+
+30
+00:01:45,520 --> 00:01:47,955
+mais on va en finale
+sans s'être foulés
+
+31
+00:01:48,120 --> 00:01:49,520
+pendant les éliminatoires.
+
+32
+00:01:49,680 --> 00:01:53,720
+- On monte en puissance, les mecs.
+- Tu dois avoir raison, mais...
+
+33
+00:01:53,920 --> 00:01:56,719
+on devrait y retourner
+pour voir la concurrence.
+
+34
+00:01:57,400 --> 00:01:59,790
+<i>Mesdames et messieurs, Gavin Belson !</i>
+
+35
+00:02:03,360 --> 00:02:06,876
+Quoi que vous ayez entendu,
+la taille, ça compte.
+
+36
+00:02:07,520 --> 00:02:11,070
+Bienvenue à tous
+pour ce voyage au cœur de Nucleus.
+
+37
+00:02:11,200 --> 00:02:12,429
+J'espère que ça sera à chier.
+
+38
+00:02:12,600 --> 00:02:16,037
+Nucleus contient la plus grande
+diversité d'éléments qu'on ait vus
+
+39
+00:02:16,240 --> 00:02:17,799
+dans une compression dans le cloud.
+
+40
+00:02:18,040 --> 00:02:21,033
+Des fonctionnalités impressionnantes,
+l'interconnectivité
+
+41
+00:02:21,240 --> 00:02:24,358
+et la simplicité
+qu'on attend de la famille Hooli.
+
+42
+00:02:24,520 --> 00:02:26,751
+Nous rendons
+tous vos fichiers accessibles
+
+43
+00:02:26,920 --> 00:02:29,071
+pour des téléchargements éclair
+
+44
+00:02:29,240 --> 00:02:31,197
+depuis n'importe quel appareil.
+
+45
+00:02:31,360 --> 00:02:33,750
+Ces fonctionnalités
+seront synchronisables
+
+46
+00:02:33,960 --> 00:02:36,316
+via Hooli Mail, Hooli Search
+
+47
+00:02:37,120 --> 00:02:39,430
+et toute la suite logicielle
+de Hooli.
+
+48
+00:02:39,920 --> 00:02:41,673
+Il y a une tonne de fonctionnalités.
+
+49
+00:02:41,800 --> 00:02:45,874
+Il peut pas battre notre score
+de Weissman, même avec ses gadgets.
+
+50
+00:02:46,000 --> 00:02:48,151
+C'est une belle bagnole
+avec un moteur pourri.
+
+51
+00:02:48,320 --> 00:02:50,710
+Et maintenant, l'heure de vérité.
+
+52
+00:02:51,000 --> 00:02:53,913
+Comme vous allez le voir,
+notre score de Weissman
+
+53
+00:02:54,080 --> 00:02:56,959
+est le meilleur
+de l'histoire de la compression.
+
+54
+00:02:59,920 --> 00:03:02,515
+- Putain !
+- Exactement le même que le nôtre.
+
+55
+00:03:02,680 --> 00:03:04,592
+2,89.
+
+56
+00:03:05,000 --> 00:03:06,912
+Ce n'est pas une erreur.
+
+57
+00:03:07,120 --> 00:03:09,271
+L'air se fait plus rare.
+
+58
+00:03:09,440 --> 00:03:12,478
+Nous sommes à la limite
+de la compression sans perte
+
+59
+00:03:12,600 --> 00:03:15,115
+des fichiers audio, vidéo
+et des données.
+
+60
+00:03:15,560 --> 00:03:18,758
+Quiconque prétendra avoir
+une plate-forme plus rapide
+
+61
+00:03:18,920 --> 00:03:20,149
+devra avoir de bons avocats.
+
+62
+00:03:21,160 --> 00:03:23,436
+J'espère
+que vous avez aimé Nucleus.
+
+63
+00:03:23,640 --> 00:03:25,040
+Nous avons la vitesse,
+
+64
+00:03:25,200 --> 00:03:26,919
+nous avons les composants,
+
+65
+00:03:27,120 --> 00:03:28,270
+et nous avons...
+
+66
+00:03:28,720 --> 00:03:30,040
+Shakira !
+
+67
+00:03:48,320 --> 00:03:51,870
+Ils ont tout simplement
+totalement rétro-ingénieré
+
+68
+00:03:52,080 --> 00:03:53,480
+notre moteur de compression.
+
+69
+00:03:53,600 --> 00:03:55,114
+Ils nous ont crucifiés.
+
+70
+00:03:55,280 --> 00:03:56,270
+Ça va aller.
+
+71
+00:03:56,400 --> 00:03:57,470
+Quoi ?
+
+72
+00:03:57,600 --> 00:04:00,957
+Cette compétition est basée
+sur la viabilité sur le marché.
+
+73
+00:04:01,120 --> 00:04:04,557
+Au mieux,
+on est une pâle copie de Nucleus.
+
+74
+00:04:04,760 --> 00:04:07,070
+Ils ont 50 modules incroyables.
+
+75
+00:04:07,200 --> 00:04:09,317
+On en a 5 qui fonctionnent à peine.
+
+76
+00:04:09,840 --> 00:04:12,753
+On a des soucis avec la 3D.
+Qui achèterait ça ?
+
+77
+00:04:12,920 --> 00:04:14,195
+Mais on s'en fout.
+
+78
+00:04:14,360 --> 00:04:18,673
+La plate-forme gère pas la 3D ?
+De toute façon, la 3D, c'est à chier.
+
+79
+00:04:18,840 --> 00:04:21,719
+Et si le baratin de Gavin
+était un truc positif ?
+
+80
+00:04:21,840 --> 00:04:22,512
+Arrête.
+
+81
+00:04:22,600 --> 00:04:25,160
+On doit se décarcasser
+jusqu'à la présentation.
+
+82
+00:04:25,320 --> 00:04:26,674
+Il vient de nous achever.
+
+83
+00:04:26,840 --> 00:04:30,197
+En attendant, on est comme
+ces animaux qui sont encerclés.
+
+84
+00:04:30,360 --> 00:04:33,592
+On va être imprévisibles
+et tout dézinguer autour de nous.
+
+85
+00:04:33,760 --> 00:04:35,319
+Je vais choper la tête de Gavin.
+
+86
+00:04:35,440 --> 00:04:37,193
+Les gars, j'ai pensé à un truc.
+
+87
+00:04:37,640 --> 00:04:39,438
+Bon, voilà ce qu'il en est.
+
+88
+00:04:39,560 --> 00:04:42,758
+Les start-up à succès débutent
+avec un business model.
+
+89
+00:04:43,000 --> 00:04:45,879
+Elles rencontrent un problème
+et changent d'orientation.
+
+90
+00:04:46,040 --> 00:04:47,235
+Instagram,
+
+91
+00:04:47,400 --> 00:04:50,950
+c'était un service de géolocalisation
+qui a pivoté.
+
+92
+00:04:51,120 --> 00:04:53,476
+Chatroulette était un média social
+
+93
+00:04:53,640 --> 00:04:57,429
+avant de devenir une aire de jeux
+pour les bêtes de sexe.
+
+94
+00:04:58,040 --> 00:05:01,795
+Il nous faut une nouvelle idée.
+On peut aussi pivoter.
+
+95
+00:05:01,920 --> 00:05:04,037
+T'es complètement barré.
+
+96
+00:05:04,520 --> 00:05:05,590
+Tu planes grave.
+
+97
+00:05:05,760 --> 00:05:09,720
+Je manque de sommeil. J'ai passé
+4 jours dans une boîte en métal
+
+98
+00:05:09,880 --> 00:05:12,395
+pour atterrir parmi
+des chariots élévateurs robotisés.
+
+99
+00:05:12,560 --> 00:05:14,711
+C'était dur, mais je suis de retour.
+
+100
+00:05:14,880 --> 00:05:17,759
+Je suis rétabli et concentré.
+On va pivoter.
+
+101
+00:05:17,960 --> 00:05:19,394
+Ne perdez pas espoir.
+
+102
+00:05:19,560 --> 00:05:20,471
+Regardez-moi.
+
+103
+00:05:22,080 --> 00:05:24,754
+On a un nom génial,
+une équipe géniale.
+
+104
+00:05:24,920 --> 00:05:27,230
+On a un logo génial
+et un nom génial.
+
+105
+00:05:27,400 --> 00:05:28,959
+Il nous manque une idée.
+
+106
+00:05:29,120 --> 00:05:31,635
+Pivotons.
+
+107
+00:05:34,760 --> 00:05:36,717
+On le reverra sans doute plus vivant.
+
+108
+00:05:36,840 --> 00:05:40,516
+Je vais aller me balader
+pour me vider l'esprit.
+
+109
+00:05:40,640 --> 00:05:44,520
+On se rejoint à l'hôtel
+pour réfléchir à une stratégie.
+
+110
+00:05:47,040 --> 00:05:48,554
+On va être pauvres.
+
+111
+00:05:50,840 --> 00:05:53,799
+J'aimerais vous parler
+de la société Pied Piper.
+
+112
+00:05:53,960 --> 00:05:55,440
+Que fait-on ?
+Bonne question.
+
+113
+00:05:55,600 --> 00:05:57,592
+Aidez-nous à trouver la réponse.
+
+114
+00:05:57,760 --> 00:06:01,436
+Et si c'était une appli
+qui attirait les rongeurs ?
+
+115
+00:06:01,600 --> 00:06:05,037
+Comme dans le "Joueur de flûte",
+en vue d'une extermination
+
+116
+00:06:05,200 --> 00:06:06,998
+ou pour nourrir votre serpent.
+
+117
+00:06:07,160 --> 00:06:09,356
+On vous dira pas
+quoi faire de vos rats,
+
+118
+00:06:09,520 --> 00:06:11,637
+mais on vous en trouvera
+en un éclair.
+
+119
+00:06:11,800 --> 00:06:14,998
+Vous seriez très intéressés,
+plutôt ou pas du tout ?
+
+120
+00:06:15,160 --> 00:06:16,276
+Alors ?
+
+121
+00:06:16,560 --> 00:06:17,755
+Alors ?
+
+122
+00:06:21,920 --> 00:06:24,389
+Regardez-les.
+Ils sont pleins d'espoir.
+
+123
+00:06:25,000 --> 00:06:25,797
+Les crétins.
+
+124
+00:06:26,120 --> 00:06:28,316
+Regarde, ils embauchent chez Kwerpy.
+
+125
+00:06:28,480 --> 00:06:31,075
+Ils ont eu un financement de série A
+de 20 millions.
+
+126
+00:06:31,240 --> 00:06:33,709
+On estime
+qu'ils valent 280 millions.
+
+127
+00:06:34,800 --> 00:06:36,553
+Ça aurait pu être nous.
+
+128
+00:06:37,400 --> 00:06:41,110
+Dommage, on a déjà du boulot.
+On aurait pu bosser chez eux.
+
+129
+00:06:43,160 --> 00:06:46,836
+Il y a qu'une tête de gland
+qui lâcherait Richard maintenant
+
+130
+00:06:47,000 --> 00:06:49,515
+avant qu'on fasse
+officiellement faillite.
+
+131
+00:06:52,320 --> 00:06:53,959
+Une vraie tête de gland.
+
+132
+00:06:55,920 --> 00:06:57,320
+Mais bon,
+
+133
+00:06:57,760 --> 00:07:00,195
+ça va pas tarder
+et on est juste à côté.
+
+134
+00:07:00,360 --> 00:07:02,716
+Il est juste là.
+
+135
+00:07:03,480 --> 00:07:05,551
+- Je suis pas une tête de gland.
+- Moi non plus.
+
+136
+00:07:05,720 --> 00:07:08,155
+- On est zéro tête de gland.
+- Ma tête et mon gland.
+
+137
+00:07:08,360 --> 00:07:11,592
+Vous connaissez l'expression
+"astiquer des flûtes" ?
+
+138
+00:07:11,760 --> 00:07:14,355
+Et si une appli
+du nom de Pied Piper
+
+139
+00:07:14,520 --> 00:07:17,399
+pouvait vous dire,
+avec un certain degré de certitude,
+
+140
+00:07:17,560 --> 00:07:19,950
+si vous irez au paradis
+ou en enfer ?
+
+141
+00:07:20,080 --> 00:07:23,039
+Très intéressés,
+plutôt intéressés, pas intéressés ?
+
+142
+00:07:23,440 --> 00:07:24,157
+Alors ?
+
+143
+00:07:24,440 --> 00:07:25,476
+Alors ?
+
+144
+00:07:27,200 --> 00:07:30,477
+Vos promesses sont démesurées.
+Pouvez-vous les tenir ?
+
+145
+00:07:30,600 --> 00:07:31,795
+Tout à fait.
+
+146
+00:07:31,960 --> 00:07:36,079
+Pour moi, Kara, bonté et grandeur
+ne sont pas que de simples mots.
+
+147
+00:07:36,200 --> 00:07:38,556
+C'est l'intention de Hooli
+depuis ses origines.
+
+148
+00:07:38,720 --> 00:07:41,952
+Gavin, ne vous abaissez pas
+à répondre à tout ça.
+
+149
+00:07:42,120 --> 00:07:44,954
+Je peux le faire.
+Erlich Bachman de Pied Piper.
+
+150
+00:07:45,120 --> 00:07:47,396
+Ai-je été violemment agressé ? Oui.
+
+151
+00:07:47,560 --> 00:07:50,394
+Gavin Belson est-il impliqué ?
+On ne sait pas.
+
+152
+00:07:50,560 --> 00:07:52,631
+La rumeur qui dit
+que ce TechCrunch,
+
+153
+00:07:52,800 --> 00:07:55,395
+c'est de la poudre aux yeux,
+n'est pas fondée.
+
+154
+00:07:55,720 --> 00:07:57,234
+- Quelle rumeur ?
+- Merci !
+
+155
+00:07:57,400 --> 00:07:59,596
+Pourquoi Gavin tremperait là-dedans
+
+156
+00:07:59,760 --> 00:08:03,197
+s'il n'avait pas de bonnes raisons
+de craindre Pied Piper
+
+157
+00:08:03,360 --> 00:08:04,874
+et sa supériorité technologique ?
+
+158
+00:08:05,200 --> 00:08:07,760
+Tout ça et les autres rumeurs
+sur Gavin Belson
+
+159
+00:08:07,960 --> 00:08:09,440
+sont sans fondement.
+
+160
+00:08:09,600 --> 00:08:12,877
+L'alcoolisme, les inconvenances
+sexuelles au travail,
+
+161
+00:08:13,240 --> 00:08:16,119
+le crash imminent
+des actions Hooli...
+
+162
+00:08:16,280 --> 00:08:18,556
+- C'est ridicule...
+- Tout à fait !
+
+163
+00:08:18,720 --> 00:08:20,598
+Pourquoi répéter
+ces détails indécents
+
+164
+00:08:20,760 --> 00:08:23,480
+qui sont, sans doute,
+déjà connus de tous ?
+
+165
+00:08:23,600 --> 00:08:26,434
+Coupable ou pas, Gavin,
+je suis à vos côtés.
+
+166
+00:08:27,120 --> 00:08:28,076
+Un commentaire ?
+
+167
+00:08:32,240 --> 00:08:33,594
+Et si nous avancions ?
+
+168
+00:08:33,760 --> 00:08:37,549
+Oui, avançons et oublions ça.
+Je vous pardonne, Gavin.
+
+169
+00:08:37,720 --> 00:08:40,235
+Malgré la violence de mon agression.
+
+170
+00:08:40,760 --> 00:08:43,400
+Ça doit être chouette
+de bosser chez Pied Piper.
+
+171
+00:08:43,560 --> 00:08:46,553
+Oui, Pied Piper est imbattable.
+Pas vrai ?
+
+172
+00:08:46,720 --> 00:08:49,838
+Tous les jours,
+j'ai l'impression d'être en enfer.
+
+173
+00:08:50,480 --> 00:08:51,197
+Pardon ?
+
+174
+00:08:51,280 --> 00:08:53,237
+Il est sataniste,
+c'est un compliment.
+
+175
+00:08:53,400 --> 00:08:54,197
+Sympa.
+
+176
+00:08:54,360 --> 00:08:55,999
+En fait, on adore notre boîte.
+
+177
+00:08:56,160 --> 00:08:58,720
+Ça me gène pas
+de le dire haut et fort. Tu...
+
+178
+00:08:58,840 --> 00:08:59,432
+l'adores.
+
+179
+00:08:59,520 --> 00:09:02,638
+On le dit tous les deux haut et fort
+ce qui prouve
+
+180
+00:09:02,800 --> 00:09:04,996
+qu'on est pas des têtes de gland.
+
+181
+00:09:05,800 --> 00:09:07,712
+On voulait donc te demander...
+
+182
+00:09:08,120 --> 00:09:09,236
+Les gars...
+
+183
+00:09:10,760 --> 00:09:11,955
+De vous à moi...
+
+184
+00:09:12,520 --> 00:09:14,034
+Notre version bêta a foiré.
+
+185
+00:09:14,400 --> 00:09:17,632
+Les investisseurs se rétractent.
+Pour notre série A, c'est mort.
+
+186
+00:09:17,800 --> 00:09:22,158
+On a échoué. On a juste de quoi tenir
+2-3 semaines max.
+
+187
+00:09:22,760 --> 00:09:23,557
+Donc...
+
+188
+00:09:25,440 --> 00:09:27,318
+Je pourrais bosser pour vous ?
+
+189
+00:09:32,920 --> 00:09:35,913
+Combien seriez-vous prêt à donner
+pour une appli
+
+190
+00:09:36,080 --> 00:09:38,800
+du nom de Pied Piper
+qui localiserait votre enfant ?
+
+191
+00:09:39,160 --> 00:09:42,949
+Je peux le suivre partout
+et vous ne pouvez pas m'en empêcher.
+
+192
+00:09:43,120 --> 00:09:45,510
+Un enfant disparu
+n'est presque jamais retrouvé.
+
+193
+00:09:45,680 --> 00:09:48,195
+Intéressés, très intéressés
+ou très intéressés ?
+
+194
+00:09:55,520 --> 00:09:56,397
+Une valise...
+
+195
+00:09:57,760 --> 00:09:59,080
+Donc, tu...
+
+196
+00:09:59,600 --> 00:10:02,991
+Peter a appelé.
+Il a vu la présentation d'Erlich,
+
+197
+00:10:03,320 --> 00:10:06,040
+si on peut appeler ça comme ça,
+et celle de Gavin.
+
+198
+00:10:07,120 --> 00:10:08,998
+Je dois rentrer à Palo Alto.
+
+199
+00:10:09,400 --> 00:10:12,120
+Il veut que je supervise
+certaines choses.
+
+200
+00:10:12,520 --> 00:10:15,115
+Maintenant qu'on est morts
+et enterrés.
+
+201
+00:10:15,280 --> 00:10:18,512
+Écoute, je regrette
+que tu aies renoncé à cet argent.
+
+202
+00:10:18,720 --> 00:10:20,791
+Je voulais que Peter te finance
+
+203
+00:10:20,960 --> 00:10:23,429
+parce que je pensais
+que ta boîte était géniale.
+
+204
+00:10:23,600 --> 00:10:26,240
+Ça n'a juste pas marché
+cette fois-ci.
+
+205
+00:10:26,360 --> 00:10:27,555
+Honnêtement ?
+
+206
+00:10:27,720 --> 00:10:31,316
+J'ai pas dormi plus de 2 heures
+de suite ces derniers mois.
+
+207
+00:10:31,520 --> 00:10:33,557
+J'ai un rhume depuis un an.
+
+208
+00:10:33,720 --> 00:10:37,031
+Mes crampes au bide me donnent
+l'impression d'avoir des règles.
+
+209
+00:10:37,480 --> 00:10:39,073
+C'est peut-être mieux comme ça.
+
+210
+00:10:40,880 --> 00:10:41,870
+Je dois y aller.
+
+211
+00:10:43,400 --> 00:10:45,790
+Je regrette
+qu'on arrête notre collaboration.
+
+212
+00:10:45,960 --> 00:10:47,360
+Oui, moi aussi.
+
+213
+00:10:48,320 --> 00:10:49,071
+J'imagine...
+
+214
+00:10:50,000 --> 00:10:51,514
+qu'on se reverra pas.
+
+215
+00:10:52,120 --> 00:10:55,591
+Maintenant que l'interdiction
+de côtoyer des collègues
+
+216
+00:10:55,800 --> 00:10:56,950
+n'est plus d'actualité,
+
+217
+00:10:57,600 --> 00:10:59,512
+appelle-moi
+si tu veux prendre un verre.
+
+218
+00:11:00,520 --> 00:11:02,159
+Genre prendre un vrai verre ?
+
+219
+00:11:03,480 --> 00:11:05,199
+Tu sors avec des ratés ?
+
+220
+00:11:06,560 --> 00:11:07,755
+Tout le temps.
+
+221
+00:11:16,440 --> 00:11:19,114
+Vous avez une arme
+ou de la drogue sur vous ?
+
+222
+00:11:19,800 --> 00:11:20,916
+Mais oui.
+
+223
+00:11:21,200 --> 00:11:22,520
+Oui, tout à fait.
+
+224
+00:11:23,760 --> 00:11:24,750
+On y va.
+
+225
+00:11:26,600 --> 00:11:30,037
+De l'Adderall. C'est une substance
+réglementée. C'est à vous ?
+
+226
+00:11:30,600 --> 00:11:32,990
+C'est à un mineur
+que j'ai invité chez moi.
+
+227
+00:11:33,960 --> 00:11:36,395
+Je vais devoir vous demander
+de me suivre.
+
+228
+00:11:36,560 --> 00:11:39,439
+C'est gentil, mais je suis occupé.
+Je pivote.
+
+229
+00:11:39,600 --> 00:11:41,557
+- On y va.
+- Non, je pivote.
+
+230
+00:11:41,720 --> 00:11:42,710
+Je pivote !
+
+231
+00:11:44,800 --> 00:11:48,111
+En fait, qu'est-ce qu'on va
+présenter demain ?
+
+232
+00:11:48,680 --> 00:11:51,275
+- Une idée.
+- Pourquoi faire une présentation ?
+
+233
+00:11:51,480 --> 00:11:52,516
+Ça veut dire quoi ?
+
+234
+00:11:52,680 --> 00:11:56,117
+Pourquoi se faire humilier
+devant des milliers de spectateurs
+
+235
+00:11:56,280 --> 00:11:57,634
+pendant
+une retransmission en direct ?
+
+236
+00:11:57,800 --> 00:11:59,598
+D'après toi, on devrait pas y aller ?
+
+237
+00:11:59,760 --> 00:12:03,390
+Ne le prends pas mal, mais ça va être
+une exécution publique.
+
+238
+00:12:03,800 --> 00:12:08,397
+Les gens aiment ça.
+C'est le showbiz, on abandonne pas.
+
+239
+00:12:08,560 --> 00:12:11,871
+Je veux la faire, cette présentation.
+Mais voilà...
+
+240
+00:12:12,800 --> 00:12:13,790
+Je sais pas.
+
+241
+00:12:18,440 --> 00:12:20,159
+Est-ce que tu vas bien ?
+
+242
+00:12:20,320 --> 00:12:23,472
+Non. Quoi ? Oui !
+Je vais bien, tout va bien.
+
+243
+00:12:23,680 --> 00:12:26,149
+- Ils m'ont relâché.
+- Qui t'a relâché ?
+
+244
+00:12:26,320 --> 00:12:28,152
+Tu n'as pas dormi
+depuis quand ?
+
+245
+00:12:28,320 --> 00:12:29,436
+Tout à fait, David.
+
+246
+00:12:30,320 --> 00:12:31,834
+De quoi parliez-vous ?
+
+247
+00:12:32,000 --> 00:12:35,755
+De la présentation que j'ai pas pu
+faire pendant les éliminatoires.
+
+248
+00:12:35,920 --> 00:12:38,480
+Ma tronche a été explosée
+pour le bien de l'équipe.
+
+249
+00:12:38,640 --> 00:12:40,359
+On va donc la faire demain.
+
+250
+00:12:40,520 --> 00:12:42,432
+Et vous savez quoi ?
+On va gagner.
+
+251
+00:12:42,600 --> 00:12:44,193
+Oui, on va gagner
+
+252
+00:12:44,360 --> 00:12:47,592
+même si je dois branler
+tous les mecs du public.
+
+253
+00:12:48,520 --> 00:12:49,920
+Ça en fait, des branlettes.
+
+254
+00:12:51,040 --> 00:12:53,714
+On a 10 min pour faire
+notre présentation, donc...
+
+255
+00:12:54,080 --> 00:12:56,549
+Donc, on est de la baise, non ?
+
+256
+00:12:58,600 --> 00:13:02,753
+Même s'il les branle deux par deux,
+il y a environ 800 mecs.
+
+257
+00:13:02,880 --> 00:13:06,032
+Ça fait 400 fois
+le temps de branlette moyen.
+
+258
+00:13:06,200 --> 00:13:08,192
+- Le quoi ?
+- Le temps de branlette moyen.
+
+259
+00:13:08,360 --> 00:13:10,272
+C'est sans importance,
+mais l'hypothèse,
+
+260
+00:13:10,440 --> 00:13:13,672
+c'est que le temps est égal
+à 400 éjac avec un ratio de 2 bites.
+
+261
+00:13:14,360 --> 00:13:17,797
+S'il en branle 4 en même temps,
+ça le divise en deux.
+
+262
+00:13:17,960 --> 00:13:20,429
+Comment il pourrait ?
+Il a que deux mains.
+
+263
+00:13:20,600 --> 00:13:22,159
+Ça fait 2 bites à la fois.
+
+264
+00:13:22,360 --> 00:13:25,876
+Tu as deux types de chaque côté,
+leurs bites se font face.
+
+265
+00:13:26,040 --> 00:13:29,875
+Tu as toute l'amplitude nécessaire.
+Ça en fait 4, tu vois ?
+
+266
+00:13:30,880 --> 00:13:33,918
+- En partant du milieu, logique.
+- C'est ultra efficace.
+
+267
+00:13:34,720 --> 00:13:38,316
+On essaie, avec cette hypothèse,
+de minimiser le temps qui équivaut à
+
+268
+00:13:38,440 --> 00:13:41,399
+800 mecs multipliés
+par le temps de branlette moyen
+
+269
+00:13:41,560 --> 00:13:43,392
+divisé par 4 bites.
+
+270
+00:13:43,560 --> 00:13:46,394
+Il devra les classer par leur taille
+
+271
+00:13:46,560 --> 00:13:47,755
+pour aligner leurs bites.
+
+272
+00:13:47,920 --> 00:13:49,400
+C'est pas la taille, techniquement.
+
+273
+00:13:49,560 --> 00:13:53,395
+Ce qui nous intéresse, c'est
+la distance de leur bite au sol.
+
+274
+00:13:53,680 --> 00:13:55,751
+On va appeler ça la DBS.
+
+275
+00:13:56,400 --> 00:13:57,436
+Mon Dieu !
+
+276
+00:13:57,600 --> 00:13:59,592
+Si leur bite est assez grande,
+
+277
+00:13:59,760 --> 00:14:03,913
+elle pourrait aller vers celle
+d'un mec avec une DBS différente.
+
+278
+00:14:04,080 --> 00:14:07,596
+Plus elle est grande,
+plus ça compense l'écart de DBS.
+
+279
+00:14:07,760 --> 00:14:11,231
+Je pourrais toujours
+les branler facilement.
+
+280
+00:14:11,920 --> 00:14:13,513
+Mais en appliquant un angle.
+
+281
+00:14:13,640 --> 00:14:17,998
+La DBS du mec 1 est égale
+à celle du mec 2 et ainsi de suite.
+
+282
+00:14:18,160 --> 00:14:19,992
+La longueur L génère
+
+283
+00:14:20,160 --> 00:14:23,358
+un angle complémentaire
+au niveau du manche.
+
+284
+00:14:23,520 --> 00:14:25,830
+Appelons ça thêta D.
+L'orgasme...
+
+285
+00:14:26,240 --> 00:14:28,118
+Oh la vache ! Mon Dieu !
+
+286
+00:14:28,960 --> 00:14:31,634
+Je suis vraiment un imbécile.
+Le milieu !
+
+287
+00:14:31,800 --> 00:14:32,631
+Le milieu !
+
+288
+00:14:34,120 --> 00:14:35,236
+Comment j'ai pu...
+
+289
+00:14:38,640 --> 00:14:40,871
+La circonférence affecte sa capacité
+
+290
+00:14:41,040 --> 00:14:43,475
+à branler différentes bites
+simultanément ?
+
+291
+00:14:47,800 --> 00:14:49,678
+Merde, je crois que oui.
+
+292
+00:15:01,800 --> 00:15:02,995
+Mais bien sûr.
+
+293
+00:15:03,360 --> 00:15:06,990
+Le temps jusqu'à l'orgasme,
+ou TJO, doit être
+
+294
+00:15:07,160 --> 00:15:08,913
+identique pour chaque paire.
+
+295
+00:15:09,040 --> 00:15:11,919
+Sinon, je m'use sur un mec
+qui a déjà craché.
+
+296
+00:15:12,040 --> 00:15:16,319
+Sauf si une bite en remplace
+une autre quand tu vas en arrière.
+
+297
+00:15:16,480 --> 00:15:18,551
+Comme ça, tu perds pas d'énergie.
+
+298
+00:15:18,720 --> 00:15:21,474
+Bref, il y a pas mieux
+pour mesurer leur endurance.
+
+299
+00:15:21,640 --> 00:15:25,350
+Les gars, Richard est enfermé
+là-dedans depuis 2 heures.
+
+300
+00:15:25,520 --> 00:15:27,352
+Vous croyez qu'il va bien ?
+
+301
+00:15:28,560 --> 00:15:31,029
+- Il aurait pas...
+- Il était sacrément miné.
+
+302
+00:16:10,720 --> 00:16:13,394
+Allez, on y va.
+La finale va débuter. Debout.
+
+303
+00:16:13,560 --> 00:16:14,391
+Gilfoyle !
+
+304
+00:16:17,880 --> 00:16:20,236
+Il s'est passé quoi avec la porte ?
+
+305
+00:16:20,400 --> 00:16:24,189
+- T'inquiète. La plate-forme marche ?
+- J'ai fait certains changements.
+
+306
+00:16:24,360 --> 00:16:25,237
+Mais oui.
+
+307
+00:16:25,400 --> 00:16:26,629
+Tu me raconteras.
+
+308
+00:16:26,800 --> 00:16:28,553
+Bande de godes, on y va.
+
+309
+00:16:28,720 --> 00:16:30,916
+Sur quoi t'as bossé cette nuit ?
+
+310
+00:16:31,080 --> 00:16:33,117
+Je crois avoir fait une découverte.
+
+311
+00:16:33,240 --> 00:16:34,754
+Donc, tout fonctionne ?
+
+312
+00:16:34,920 --> 00:16:36,240
+Techniquement, non.
+
+313
+00:16:48,120 --> 00:16:50,919
+<i>Bonne chance, Richard.</i>
+<i>Désolée de ne pas être là pour</i>
+
+314
+00:17:06,760 --> 00:17:07,955
+Franchement, mesdames.
+
+315
+00:17:08,120 --> 00:17:09,679
+Qu'y a-t-il moins sexy
+
+316
+00:17:09,840 --> 00:17:13,470
+qu'une expérience utilisateur
+en dessous du niveau optimal ?
+
+317
+00:17:13,920 --> 00:17:16,037
+C'est ce qu'il y a de pire, non ?
+
+318
+00:17:16,480 --> 00:17:18,119
+On a tout étudié en détail.
+
+319
+00:17:18,280 --> 00:17:19,953
+On a la solution à ce problème.
+
+320
+00:17:20,120 --> 00:17:21,952
+Zenella est prête
+à la commercialiser.
+
+321
+00:17:22,120 --> 00:17:24,237
+J'ai compris,
+y a plein de changements.
+
+322
+00:17:24,400 --> 00:17:27,598
+Va à l'essentiel.
+J'aimerais savoir ce que je présente.
+
+323
+00:17:27,760 --> 00:17:29,956
+J'ai pas le temps
+de tout t'expliquer.
+
+324
+00:17:30,120 --> 00:17:31,031
+Ça veut dire quoi ?
+
+325
+00:17:31,200 --> 00:17:34,398
+C'est la bonne version ?
+Je retrouve pas la suite logicielle.
+
+326
+00:17:34,560 --> 00:17:35,710
+Elle n'y est pas.
+
+327
+00:17:35,960 --> 00:17:36,996
+Je l'ai effacée.
+
+328
+00:17:37,760 --> 00:17:39,433
+Les voilà.
+Pied Piper vient d'arriver.
+
+329
+00:17:39,600 --> 00:17:40,829
+Désolé pour le retard.
+
+330
+00:17:41,000 --> 00:17:42,229
+Parle-moi.
+
+331
+00:17:42,400 --> 00:17:45,438
+Pour être le chanteur du groupe,
+je dois connaître la mélodie.
+
+332
+00:17:46,080 --> 00:17:48,993
+Je crois que je vais me charger
+de la présentation.
+
+333
+00:17:49,160 --> 00:17:51,152
+Attends. Quoi ?
+Non, Richard.
+
+334
+00:17:51,280 --> 00:17:54,000
+Avec tout le respect que je te dois,
+tu es nul.
+
+335
+00:17:54,160 --> 00:17:57,358
+Tu as un pro du spectacle
+et tu veux t'en passer ?
+
+336
+00:17:57,520 --> 00:17:59,989
+Libère-moi, Richard.
+Libère le Kraken.
+
+337
+00:18:00,160 --> 00:18:01,355
+Pied Piper, c'est à vous.
+
+338
+00:18:02,560 --> 00:18:03,391
+C'est parti.
+
+339
+00:18:03,600 --> 00:18:06,513
+Je sais pas ce que tu as fait,
+mais j'espère que ça marche.
+
+340
+00:18:06,600 --> 00:18:07,590
+Moi aussi.
+
+341
+00:18:08,080 --> 00:18:10,834
+Accueillons la dernière équipe
+de la finale
+
+342
+00:18:11,000 --> 00:18:14,471
+de la bataille annuelle des start-up
+organisée par TechCrunch Disrupt.
+
+343
+00:18:15,000 --> 00:18:17,799
+Pied Piper est représenté
+par Erlich Bachman.
+
+344
+00:18:24,080 --> 00:18:26,834
+En fait, il y a un petit changement.
+
+345
+00:18:27,040 --> 00:18:30,431
+Pied Piper sera représenté
+par... Richard Hendricks.
+
+346
+00:18:40,880 --> 00:18:43,076
+Désolé, j'ai eu un moment d'absence.
+
+347
+00:18:43,320 --> 00:18:45,676
+Je les ai chauffés, achève-les.
+
+348
+00:18:47,040 --> 00:18:47,917
+J'y comprends rien.
+
+349
+00:18:48,080 --> 00:18:51,391
+Il devait améliorer la plate-forme,
+mais il a tout effacé.
+
+350
+00:18:51,560 --> 00:18:53,279
+Tout est dans le cloud ?
+
+351
+00:18:53,480 --> 00:18:56,075
+Tout le boulot du Dépeceur a disparu.
+
+352
+00:18:56,760 --> 00:18:59,719
+La compression de Pied Piper
+n'existe pas sans cloud.
+
+353
+00:18:59,880 --> 00:19:04,397
+Ce sont les 10 dernières minutes
+de Pied Piper. Savourons-les.
+
+354
+00:19:04,560 --> 00:19:06,711
+- Il a perdu la boule.
+- Complètement.
+
+355
+00:19:10,400 --> 00:19:13,279
+Je suis...
+Je m'appelle Richard Hendricks.
+
+356
+00:19:13,400 --> 00:19:15,073
+Je suis, ainsi que...
+
+357
+00:19:16,000 --> 00:19:17,480
+ce type, lui et lui...
+
+358
+00:19:18,320 --> 00:19:21,836
+et un autre type qui a disparu...
+
+359
+00:19:24,960 --> 00:19:27,600
+On est Pied Piper,
+une boîte de compression.
+
+360
+00:19:27,760 --> 00:19:29,592
+Dans les brochures,
+
+361
+00:19:29,760 --> 00:19:33,993
+il est dit que notre compression en
+cloud computing est multiplateforme.
+
+362
+00:19:35,040 --> 00:19:37,600
+C'était vrai jusqu'à hier.
+
+363
+00:19:38,160 --> 00:19:39,992
+Maintenant, ça ne l'est plus.
+
+364
+00:19:42,600 --> 00:19:46,435
+Parce que Hooli a fait
+ce qu'on essaie de faire, en mieux,
+
+365
+00:19:46,600 --> 00:19:47,920
+en carrément mieux.
+
+366
+00:19:49,760 --> 00:19:53,356
+Nucleus est construit sur le même
+moteur que notre compression.
+
+367
+00:19:53,520 --> 00:19:55,159
+C'est exactement le même.
+
+368
+00:19:55,320 --> 00:19:57,516
+Leur score de Weissman
+est de 2,89.
+
+369
+00:19:58,280 --> 00:19:59,031
+Comme le nôtre.
+
+370
+00:19:59,440 --> 00:20:03,320
+Mais ils ont ajouté
+une tonne de trucs vraiment super.
+
+371
+00:20:03,440 --> 00:20:07,434
+On peut pas égaler ça.
+Donc, on doit faire autre chose.
+
+372
+00:20:08,400 --> 00:20:09,834
+Bien joué, Hooli.
+
+373
+00:20:10,360 --> 00:20:12,079
+Bon, bref...
+
+374
+00:20:12,480 --> 00:20:16,394
+On sait tous
+que la façon la plus évidente
+
+375
+00:20:16,640 --> 00:20:19,872
+de compresser des fichiers,
+c'est d'utiliser le code de Shannon.
+
+376
+00:20:20,640 --> 00:20:22,791
+Ils peuvent pas voir,
+c'est trop petit.
+
+377
+00:20:23,200 --> 00:20:25,476
+- Ils sont une centaine.
+- J'ai besoin...
+
+378
+00:20:27,200 --> 00:20:27,951
+Merde...
+
+379
+00:20:31,160 --> 00:20:32,355
+Bien...
+
+380
+00:20:32,560 --> 00:20:34,153
+Le code de Shannon.
+
+381
+00:20:34,320 --> 00:20:37,836
+David Huffman a été un précurseur
+avec son approche ascendante.
+
+382
+00:20:38,000 --> 00:20:40,993
+Il y a eu Lempel-Ziv
+et l'approche de gauche à droite.
+
+383
+00:20:41,160 --> 00:20:42,992
+Pendant des dizaines d'années,
+
+384
+00:20:43,160 --> 00:20:44,992
+on a utilisé ces codes
+pour compresser
+
+385
+00:20:45,160 --> 00:20:48,039
+les jepg, mpeg, MP3, zip
+et tous ces trucs.
+
+386
+00:20:48,200 --> 00:20:51,352
+Mais ça, on le sait.
+C'est pas la peine d'en parler.
+
+387
+00:20:52,560 --> 00:20:55,917
+Ce qui s'est passé,
+c'est que hier soir,
+
+388
+00:20:56,040 --> 00:20:58,714
+je regardais mes amis se disputer
+
+389
+00:20:58,840 --> 00:21:02,390
+sur, vous savez,
+la manipulation... de données.
+
+390
+00:21:03,120 --> 00:21:07,160
+Combien est-ce qu'un type
+peut manipuler de données
+
+391
+00:21:07,280 --> 00:21:08,680
+d'un seul coup.
+
+392
+00:21:12,040 --> 00:21:15,033
+J'ai pensé
+qu'il devait exister un autre moyen.
+
+393
+00:21:15,520 --> 00:21:17,910
+J'appellerais ça
+l'approche du milieu.
+
+394
+00:21:18,040 --> 00:21:19,360
+De haut en bas,
+en va-et-vient.
+
+395
+00:21:19,520 --> 00:21:22,240
+C'est simultané,
+ça se passe en même temps.
+
+396
+00:21:22,880 --> 00:21:23,631
+Bref...
+
+397
+00:21:23,840 --> 00:21:26,150
+J'ai effacé tous nos modules
+hier soir.
+
+398
+00:21:26,320 --> 00:21:29,199
+J'ai réécrit notre moteur
+dans la nuit.
+
+399
+00:21:29,400 --> 00:21:31,596
+CavS
+Compression à votre Service
+
+400
+00:21:31,760 --> 00:21:34,639
+Ce matin,
+je n'ai pu faire qu'un seul test.
+
+401
+00:21:34,800 --> 00:21:38,714
+Je l'ai fait et on a obtenu
+un score de Weissman de...
+
+402
+00:21:39,160 --> 00:21:40,640
+3,8.
+
+403
+00:21:42,800 --> 00:21:46,191
+Je sais que la limite
+est en théorie à 2,9.
+
+404
+00:21:46,360 --> 00:21:48,033
+Mais comme vous pouvez le voir...
+
+405
+00:21:48,240 --> 00:21:51,836
+Excusez-moi.
+Vous avez obtenu un score de 3,8 ?
+
+406
+00:21:52,560 --> 00:21:53,710
+Oui, monsieur.
+
+407
+00:21:53,880 --> 00:21:56,236
+C'est une compression sans perte
+universelle ?
+
+408
+00:21:56,400 --> 00:21:58,437
+Texte, audio, vidéo ?
+
+409
+00:21:58,600 --> 00:21:59,875
+C'est exact.
+
+410
+00:22:00,880 --> 00:22:03,395
+Désolé d'interrompre
+votre présentation.
+
+411
+00:22:03,920 --> 00:22:05,434
+Au lieu de vous écouter,
+
+412
+00:22:05,600 --> 00:22:09,116
+nous devrions vous donner un fichier
+et voir si ça marche.
+
+413
+00:22:09,400 --> 00:22:12,791
+Si ce n'est pas le cas,
+nous en resterons là, pas vrai ?
+
+414
+00:22:13,080 --> 00:22:14,753
+Ça me semble correct.
+
+415
+00:22:14,880 --> 00:22:16,314
+N'importe quel fichier
+
+416
+00:22:16,480 --> 00:22:20,440
+sera compressé sans dégradation
+en obtenant un score de 3,8 ?
+
+417
+00:22:23,400 --> 00:22:24,754
+Accordez-nous une minute.
+
+418
+00:22:26,440 --> 00:22:28,272
+Est-ce que quelqu'un
+a quelque chose ?
+
+419
+00:22:33,840 --> 00:22:36,230
+- Tu as un truc ?
+- J'ai un fichier pour lui.
+
+420
+00:22:36,400 --> 00:22:38,631
+Andy Stafford a un fichier pour vous.
+
+421
+00:22:39,760 --> 00:22:41,752
+Il fait 132 Go.
+Il n'est pas compressé.
+
+422
+00:22:41,960 --> 00:22:43,758
+C'est une vidéo en 3D.
+
+423
+00:22:50,800 --> 00:22:51,790
+Merde !
+
+424
+00:22:52,280 --> 00:22:54,033
+Un putain de fichier en 3D ?
+
+425
+00:22:54,200 --> 00:22:55,236
+Tu déconnes ?
+
+426
+00:22:56,000 --> 00:22:57,275
+Fait chier.
+
+427
+00:22:58,040 --> 00:22:59,156
+On peut le faire ?
+
+428
+00:22:59,480 --> 00:23:00,994
+On va le découvrir.
+
+429
+00:23:01,280 --> 00:23:02,919
+J'espère que ça va marcher.
+
+430
+00:23:12,920 --> 00:23:14,320
+Merde, ça s'est arrêté.
+
+431
+00:23:17,840 --> 00:23:19,479
+Est-ce que c'est bloqué ?
+
+432
+00:23:19,640 --> 00:23:22,314
+Il ne vous reste que 2 minutes.
+
+433
+00:23:23,320 --> 00:23:24,470
+Allez, allez...
+
+434
+00:23:27,600 --> 00:23:28,829
+Taille finale compressée : 24,35
+
+435
+00:23:28,960 --> 00:23:29,837
+Ça semble bon.
+
+436
+00:23:30,920 --> 00:23:33,037
+24 Go ?
+Qu'est-ce qui s'est passé ?
+
+437
+00:23:34,640 --> 00:23:36,074
+Merde, c'est pas possible.
+
+438
+00:23:36,240 --> 00:23:37,560
+Tout a pas été compressé.
+
+439
+00:23:37,720 --> 00:23:39,120
+Ça devrait être 2 fois plus gros.
+
+440
+00:23:39,280 --> 00:23:40,919
+24 Go, c'est moins d'un quart
+
+441
+00:23:41,080 --> 00:23:43,072
+de la taille du fichier original.
+
+442
+00:23:43,240 --> 00:23:44,833
+Ça semble louche, Richard.
+
+443
+00:23:44,960 --> 00:23:47,998
+Procédons au score de Weissman
+et voyons où ça a capoté.
+
+444
+00:23:48,560 --> 00:23:52,076
+Ça devrait être rapide.
+Seulement la moitié a été compressée.
+
+445
+00:23:58,040 --> 00:24:00,111
+Désolé, j'aurais pas dû
+réécrire le code.
+
+446
+00:24:00,280 --> 00:24:02,158
+Ce qu'on avait, ça marchait.
+
+447
+00:24:02,320 --> 00:24:05,279
+Désolé, les gars.
+Gavin a gagné, on a perdu.
+
+448
+00:24:05,520 --> 00:24:07,318
+Au moins, c'est pas arrivé
+
+449
+00:24:07,480 --> 00:24:10,518
+en public
+et de façon super embarrassante.
+
+450
+00:24:17,600 --> 00:24:18,431
+Attendez...
+
+451
+00:24:18,880 --> 00:24:21,679
+Qu'est-ce qui se passe ?
+Il y a pas d'erreur.
+
+452
+00:24:24,160 --> 00:24:26,800
+<i>Score de validation : 5,2</i>
+
+453
+00:24:27,120 --> 00:24:28,395
+5,2 ?
+
+454
+00:24:28,880 --> 00:24:29,757
+Mais comment...
+
+455
+00:24:30,160 --> 00:24:32,311
+Tout le fichier a été compressé ?
+
+456
+00:24:32,800 --> 00:24:34,200
+Tout le fichier est là !
+
+457
+00:24:34,360 --> 00:24:36,955
+Ça prend 2 fois moins
+de place que je pensais.
+
+458
+00:24:37,440 --> 00:24:41,354
+Mesdames et messieurs, bien
+évidemment, nous vérifierons tout ça.
+
+459
+00:24:41,520 --> 00:24:43,591
+Mais avec un score de 5,2,
+
+460
+00:24:43,760 --> 00:24:47,959
+Pied Piper semble avoir doublé
+le meilleur score de Weissman.
+
+461
+00:24:48,120 --> 00:24:49,031
+Ils l'ont doublé !
+
+462
+00:24:49,200 --> 00:24:51,874
+Pied Piper, mesdames et messieurs.
+Applaudissez-les !
+
+463
+00:24:54,440 --> 00:24:55,760
+Et merde.
+
+464
+00:24:57,240 --> 00:24:58,435
+Je suis au TechCrunch.
+
+465
+00:24:58,640 --> 00:25:01,394
+Ce Hendricks et Pied Piper
+ont une sacrée avance.
+
+466
+00:25:01,600 --> 00:25:02,875
+On doit s'activer.
+
+467
+00:25:03,200 --> 00:25:04,953
+Dans tes dents, Gavin Belson.
+
+468
+00:25:08,480 --> 00:25:11,154
+Hendricks, petit enfoiré.
+Je te l'avais dit.
+
+469
+00:25:12,680 --> 00:25:14,592
+On sera pas pauvres !
+
+470
+00:25:15,120 --> 00:25:17,476
+Qu'est-ce qui s'est passé ?
+
+471
+00:25:17,920 --> 00:25:18,910
+On vient de gagner.
+
+472
+00:25:22,920 --> 00:25:24,639
+Ça ne surprendra personne.
+
+473
+00:25:24,800 --> 00:25:28,680
+Le vainqueur du trophée cette année
+et des 50 000 dollars,
+
+474
+00:25:28,880 --> 00:25:30,234
+dont il n'aura pas besoin,
+
+475
+00:25:30,400 --> 00:25:32,357
+c'est Pied Piper !
+
+476
+00:25:34,960 --> 00:25:36,553
+Richard a écrit le code ?
+
+477
+00:25:36,720 --> 00:25:38,120
+Il l'a écrit, oui.
+
+478
+00:25:38,280 --> 00:25:40,715
+Mais son inspiration est évidente.
+
+479
+00:25:40,880 --> 00:25:42,109
+Petite question.
+
+480
+00:25:42,280 --> 00:25:45,398
+En combien de temps pouvez-vous
+branler les mecs présents ?
+
+481
+00:25:46,640 --> 00:25:49,997
+Je sais combien de temps
+il me faudrait. Je peux le prouver.
+
+482
+00:25:50,160 --> 00:25:51,594
+- Chapeau.
+- Merci beaucoup.
+
+483
+00:25:51,760 --> 00:25:54,116
+J'y comprends rien,
+mais je veux bien investir.
+
+484
+00:25:54,280 --> 00:25:55,111
+Génial.
+
+485
+00:25:55,320 --> 00:25:57,960
+Je suis impressionné.
+Venez voir mes partenaires.
+
+486
+00:25:58,160 --> 00:26:01,392
+Ça me fait très plaisir.
+À bientôt, j'espère.
+
+487
+00:26:04,600 --> 00:26:06,159
+Félicitations.
+
+488
+00:26:06,280 --> 00:26:07,794
+Tu as été époustouflant.
+
+489
+00:26:08,480 --> 00:26:11,757
+J'ai parlé avec Peter.
+Il a tout vu grâce au satellite.
+
+490
+00:26:11,960 --> 00:26:13,872
+Il a dit qu'il n'était pas déçu.
+
+491
+00:26:14,040 --> 00:26:15,360
+Oui, c'est génial.
+
+492
+00:26:16,840 --> 00:26:19,355
+J'imagine qu'on reprend
+notre collaboration.
+
+493
+00:26:21,360 --> 00:26:22,840
+Oui, on dirait bien.
+
+494
+00:26:25,920 --> 00:26:27,957
+Ça va être la folie pour toi.
+
+495
+00:26:28,600 --> 00:26:31,593
+Toutes ces offres de financement,
+tu sauras pas quoi en faire.
+
+496
+00:26:32,560 --> 00:26:36,713
+Tu vas lancer ton affaire, embaucher,
+trouver des locaux, un assistant...
+
+497
+00:26:36,880 --> 00:26:39,759
+Peter sera plus impliqué
+et plus dur avec toi.
+
+498
+00:26:39,920 --> 00:26:42,958
+Les gens vont s'approprier ton idée
+et te feront des procès.
+
+499
+00:26:43,160 --> 00:26:45,880
+- C'est formidable, non ?
+- Oui, c'est formidable.
+
+500
+00:26:46,040 --> 00:26:48,111
+Tu as trouvé ça dingue
+jusqu'à présent ?
+
+501
+00:26:48,240 --> 00:26:50,038
+Tu vas halluciner avec la suite.
+
+502
+00:26:50,440 --> 00:26:51,237
+Je vois.
+
+503
+00:26:51,400 --> 00:26:55,519
+Tu pourrais vite diriger des milliers
+d'employés qui t'admireront.
+
+504
+00:26:55,680 --> 00:26:58,798
+Et Gavin Belson ne disparaîtra pas
+de si tôt.
+
+505
+00:26:58,960 --> 00:26:59,996
+Mais ça sera super.
+
+506
+00:27:01,360 --> 00:27:03,158
+Excuse-moi un instant.
+
+507
+00:28:15,880 --> 00:28:20,397
+À la mémoire de notre ami
+Christopher Evan Welch
+
+508
+00:28:20,480 --> 00:28:22,472
+Sous-titres : Sonia Eschbach
+
+509
+00:28:22,560 --> 00:28:24,552
+Sous-titrage : Médiadub International
+

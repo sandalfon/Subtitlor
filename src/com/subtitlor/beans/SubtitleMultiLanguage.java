@@ -1,11 +1,17 @@
 package com.subtitlor.beans;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SubtitleContent {
+//Objet pour la gestions des sous-titres multilingues
+//fr français
+//en anglais
+//al allemand
+//es espagnol
+//pt portugais
+
+public class SubtitleMultiLanguage {
 	private String tableName;
 	public String getTableName() {
 		return tableName;
@@ -19,18 +25,26 @@ public class SubtitleContent {
 	public void setIds(List<Integer> ids) {
 		this.ids = ids;
 	}
-
+	//Identifiants correspondt aux identifians aux format str
 	private List<Integer> ids;
+	//temps début au format str
 	private Map<Integer, String> timeStarts=new HashMap<Integer, String>();
+	//temps fin au format str
 	private Map<Integer, String> timeStops=new HashMap<Integer, String>();
+	//sous titres Français
 	private Map<Integer, String> frs=new HashMap<Integer, String>();
+	//sous titres Anglais
 	private Map<Integer, String> ens=new HashMap<Integer, String>();
+	//sous titres Allemand
 	private Map<Integer, String> als=new HashMap<Integer, String>();
+	//sous titres Espagnol
 	private Map<Integer, String> ess=new HashMap<Integer, String>();
+	//sous titres Portugais
 	private Map<Integer, String> pts=new HashMap<Integer, String>();
+	//sous titires
 
-	
 
+//getter et setter
 	public Map<Integer, String> getTimeStarts() {
 		return timeStarts;
 	}
@@ -76,16 +90,13 @@ public class SubtitleContent {
 	public void addSubtile(Subtitle suntitle, String tagLang){
 
 	}
-	
+
 	public Subtitle getSubtile(String tagLang){
 		Subtitle subtitle= new Subtitle();
 		return subtitle;
 	}
-	
-	private boolean checkBlockSubtitle( int index){
-		return true;
-	}
-	
+
+//Génération de l'objet sous-ttire multilangue à partir d'un sous-titre et de l'information
 	public void makeSubtitleContentFromOriginal(SubtitleInfo subtitleInfo, Subtitle subtitle){
 		ids=subtitle.getIds();
 		timeStarts=subtitle.getTimeStart();
@@ -108,6 +119,6 @@ public class SubtitleContent {
 			pts=subtitle.getLinesContent();
 			break;
 		}
-			 
+
 	}
 }

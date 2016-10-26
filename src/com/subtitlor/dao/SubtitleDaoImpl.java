@@ -1,17 +1,17 @@
 package com.subtitlor.dao;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.subtitlor.beans.Subtitle;
+import com.subtitlor.beans.SubtitleMultiLanguage;
 
 public class SubtitleDaoImpl implements SubtitleDao {
 	private DaoFactory daoFactory;
@@ -20,26 +20,31 @@ public class SubtitleDaoImpl implements SubtitleDao {
 		this.daoFactory = daoFactory;
 	}
 
-	public Subtitle generateSubtitleFromfile( String fileName){
+	// faire les sous-titres à partir d'un fichier
+	public Subtitle generateSubtitleFromfile( String fileName) throws DaoException{
 		BufferedReader br=null;
 		int stage=0;
 		int index=-1;
+
 		Subtitle subtitle =new Subtitle();
 		List<Integer> ids = new ArrayList<Integer>();
 		Map<Integer, String> timeStart = new HashMap<Integer, String>();
 		Map<Integer, String> timeStop = new HashMap<Integer, String>();
 		Map<Integer, String> linesContent = new HashMap<Integer, String>();
+
 		try {
-			br = new BufferedReader(new FileReader(fileName));
+			br = new BufferedReader( new InputStreamReader(new FileInputStream(fileName), "UTF-8"));
 			String line;
 			String tmpLineContent="";
 			while ((line = br.readLine()) != null) {
+				line=line.trim();
 				switch(stage){
 				case 0:
-
-					index=Integer.parseInt(line);
-					ids.add(index);
-					stage=1;
+					if(!line.trim().isEmpty()){
+						index=Integer.parseInt(line);
+						ids.add(index);
+						stage=1;
+					}
 					break;
 				case 1:
 					String[] times=line.split(" --> ");
@@ -49,58 +54,72 @@ public class SubtitleDaoImpl implements SubtitleDao {
 					break;
 				case 2:
 					if(line.trim().isEmpty()){
-						
 						linesContent.put(index, tmpLineContent.substring(1, tmpLineContent.length()));
 						tmpLineContent="";
 						stage=0;
 					}else{
 						tmpLineContent=tmpLineContent+'\n'+line;
 					}
-
 					break;
 				}
-
 			}
-			//ajout du dernier text des sous-titres.
-			linesContent.put(index, tmpLineContent.substring(1, tmpLineContent.length()));
+			//ajout du dernier text des sous-titres si il n'y a pas de double saut de ligne à la fin du fichier
+			if(tmpLineContent.length()>1){
+				
+				linesContent.put(index, tmpLineContent.substring(1, tmpLineContent.length()));
+			}
+
 			subtitle.setIds(ids);
 			subtitle.setLinesContent(linesContent);
 			subtitle.setTimeStart(timeStart);
 			subtitle.setTimeStop(timeStop);
 
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}finally {
-			try {
-				// fermer le buffer 
-				br.close();
+		} 
+		catch (IOException e) {
 
-			} catch (Exception e) {
+			throw new DaoException("[Erreur SubtileDaoImpl  generateSubtitleFromfile] erreur read");
+		}
+		finally {
+			try{
+				br.close();
+			}
+			catch (IOException e) {
+				throw new DaoException("[Erreur SubtileDaoImpl generateSubtitleFromfile] erreur close buffer");
 			}
 		}
 		return(subtitle);
+
+
 	}
 
 
+	//récupérer les sous-titres d'une lange à partir des sous titre multilangues
+	public Subtitle getSubtitleFromLanguageFromSubtitleMultiLanguage(SubtitleMultiLanguage subtitleMultiLanguage, String language) {
+		Subtitle subtitle = new Subtitle();
+		subtitle.setIds(subtitleMultiLanguage.getIds());
+		subtitle.setTimeStart(subtitleMultiLanguage.getTimeStarts());
+		subtitle.setTimeStop(subtitleMultiLanguage.getTimeStops());
 
-	public void writeString(Subtitle subtitle, String fileName){
-		BufferedWriter writer = null;
-		try {
-			File subFile = new File(fileName);
-			System.out.println(subFile.getCanonicalPath());
-			writer = new BufferedWriter(new FileWriter(subFile));
-			writer.write(subtitle.toString());
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				// fermer le buffer 
-				writer.close();
-			} catch (Exception e) {
-			}
+		switch(language){
+		case "en":
+			subtitle.setLinesContent(subtitleMultiLanguage.getEns());
+			break;
+		case "fr":
+			subtitle.setLinesContent(subtitleMultiLanguage.getFrs());
+			break;
+		case "al":
+			subtitle.setLinesContent(subtitleMultiLanguage.getAls());
+			break;
+		case "es":
+			subtitle.setLinesContent(subtitleMultiLanguage.getEss());
+			break;
+		case "pt":
+			subtitle.setLinesContent(subtitleMultiLanguage.getPts());
+			break;
 		}
+		return subtitle;
 	}
-	
-	
+
+
 }
