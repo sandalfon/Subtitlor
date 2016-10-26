@@ -16,40 +16,41 @@ import com.subtitlor.dao.DaoFactory;
 import com.subtitlor.dao.SubtitleInfoDao;
 import com.subtitlor.form.EditSubtitleForm;
 
-/**
- * Servlet implementation class SaveSubtitle
- */
+
 @WebServlet("/SaveSubtitle")
+//servlet de sauve garde des sous-titres
 public class SaveSubtitle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public SaveSubtitle() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		this.getServletContext().getRequestDispatcher("/WEB-INF/subtitle/show_subtitle.jsp").forward(request, response);
-	}
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		EditSubtitleForm editSubtitleForm =new EditSubtitleForm();
-//		request.getSession().setAttribute("nameTarget", request.getParameter("nameTarget"));
-//		request.getSession().setAttribute("finish", request.getParameter("finish"));
 		DaoFactory daoFactory = DaoFactory.getInstance();
 		try {
+			//Récupération des informations des sous-titres
+			SubtitleInfoDao subtitleInfoDao = daoFactory.getSubtitleInfoDao();
+			List<SubtitleInfo> subtitleInfos =subtitleInfoDao.lister();
+			request.setAttribute("subtitleInfos",subtitleInfos);
+		} catch (DaoException | BeanException    e) {
+			request.setAttribute("erreur", e.getMessage());
+		}
+		this.getServletContext().getRequestDispatcher("/WEB-INF/subtitle/show_subtitle.jsp").forward(request, response);
+
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//Gestion par le formulaire
+		EditSubtitleForm editSubtitleForm =new EditSubtitleForm();
+		DaoFactory daoFactory = DaoFactory.getInstance();
+		
+		try {
+			//Récupération des informations des sous-titres
 			editSubtitleForm.updateSubtitles(request);
-
-
 			SubtitleInfoDao subtitleInfoDao = daoFactory.getSubtitleInfoDao();
 			List<SubtitleInfo> subtitleInfos =subtitleInfoDao.lister();
 			request.setAttribute("subtitleInfos",subtitleInfos);

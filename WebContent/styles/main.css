@@ -1,0 +1,25 @@
+@CHARSET "UTF-8"";
+
+
+
+
+ul#menu {
+list-style-type : none;
+
+}
+ul#menu li { 
+display : inline;
+padding : 0 0.5em; 
+
+}
+h1 {
+	color: #090;
+}
+
+h2 {
+	color: #040555;
+}
+
+h3 {
+	color: #555555;
+}

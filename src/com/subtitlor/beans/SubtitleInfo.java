@@ -3,27 +3,27 @@ package com.subtitlor.beans;
 public class SubtitleInfo {
 	//id unique de la BD
 	private int id;
-	//nom de la video associ�e aux sous titre
+	//nom de la video associée aux sous titre
 	private String nameVideo="";
 	//nom du sous titre anglais
 	private String nameEn="";
-	//statu de l'�dition du sous-titre anglais
+	//statu de l'édition du sous-titre anglais
 	private boolean finishedEn=false;
 	//nom du sous titre français
 	private String nameFr="";
-	//statu de l'�dition du sous-titre français
+	//statu de l'édition du sous-titre français
 	private boolean finishedFr=false;
 	//nom du sous titre allemand
 	private String nameAl="";
-	//statu de l'�dition du sous-titre Allemand
+	//statu de l'édition du sous-titre Allemand
 	private boolean finishedAl=false;
 	//nom du sous titre espagnol
 	private String nameEs="";
-	//statu de l'�dition du sous-titre espagnol
+	//statu de l'édition du sous-titre espagnol
 	private boolean finishedEs=false;
 	//nom du sous titre protugais
 	private String namePt="";
-	//statu de l'�dition du sous-titre protugais
+	//statu de l'édition du sous-titre protugais
 	private boolean finishedPt=false;
 	//nom de la table contenant les sous titres
 	private String tableName="";

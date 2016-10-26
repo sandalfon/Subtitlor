@@ -2,6 +2,7 @@ package com.subtitlor.dao;
 
 import java.io.IOException;
 import java.sql.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -18,7 +19,9 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 	SubtitleInfoDaoImpl(DaoFactory daoFactory) throws DaoException {
 		this.daoFactory = daoFactory;
 	}
-
+	
+	
+	// sauvegardes des informations
 	@Override
 	public void persistSubtitleInfo(SubtitleInfo subtitleInfo) throws DaoException {
 		Connection connexion = null;
@@ -54,6 +57,8 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 			preparedStatement.setString(13, subtitleInfo.getTableName());
 
 			preparedStatement.executeUpdate();
+
+
 			connexion.commit();
 
 
@@ -64,7 +69,7 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 				}
 			} catch (SQLException e2) {
 			}
-			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo add");
+			throw new DaoException("[Erreur SubtileInfoDaoImpl  persistSubtitleInfo] Impossible de sauvegarder dans la base de données");
 		}
 		finally {
 			try {
@@ -72,13 +77,14 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 					connexion.close();  
 				}
 			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo add");
+				throw new DaoException("[Erreur SubtileInfoDaoImpl  persistSubtitleInfo] Impossible de communiquer avec la base de données");
 			}
 		}
 
 	}
 
-	@Override
+	
+	//Récupérer les objets subtileInfo
 	public List<SubtitleInfo> lister() throws DaoException, BeanException {
 		List<SubtitleInfo> subtitleInfos = new ArrayList<SubtitleInfo>();
 		Connection connexion = null;
@@ -89,8 +95,8 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 			connexion = daoFactory.getConnection();
 			statement = connexion.createStatement();
 			result = statement.executeQuery("SELECT * FROM subtitle_info;");
-			while (result.next()) {
 
+			while (result.next()) {
 				int id = result.getInt("ID");
 				String nameVideo = result.getString("name_video");
 				String vo = result.getString("vo");
@@ -105,6 +111,7 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 				String namePt = result.getString("name_pt");
 				boolean finishedPt =result.getBoolean("finished_pt");					
 				String tableName =result.getString("table_name");
+
 				SubtitleInfo subtitleInfo = new SubtitleInfo();
 				subtitleInfo.setId(id);
 				subtitleInfo.setFinishedEn(finishedEn);	
@@ -125,7 +132,7 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 				subtitleInfos.add(subtitleInfo);
 			}
 		} catch (SQLException e) {
-			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo List");
+			throw new DaoException("[Erreur SubtileInfoDaoImpl  lister] Impossible de lister les données");
 		}
 		finally {
 			try {
@@ -133,46 +140,53 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 					connexion.close();  
 				}
 			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo List");
+				throw new DaoException("[Erreur SubtileInfoDaoImpl  lister] Impossible de communiquer avec la base de données");
 			}
 		}
 		return subtitleInfos;
 	}
 
-	@Override
+	
+	//Récupérer les noms des videos
 	public List<String> videoNameLister() throws DaoException, BeanException {
 		List<String> videoNames = new ArrayList<String>();
 		Connection connexion = null;
 		Statement statement = null;
 		ResultSet result = null;
+
 		try {
 			connexion = daoFactory.getConnection();
 			statement = connexion.createStatement();
 			result = statement.executeQuery("SELECT name_video FROM subtitle_info;");
+
 			while (result.next()) {
 				String nameVideo = result.getString("name_video");
 				videoNames.add(nameVideo);
 			}
-		} catch (SQLException e) {
-			throw new DaoException("Impossiblede manipuler la base de données :: subtitleInfo List video name");
+		} 
+		catch (SQLException e) {
+			throw new DaoException("[Erreur SubtileInfoDaoImpl  videoNameLister] Impossible de de lister les données");
 		}
 		finally {
 			try {
 				if (connexion != null) {
 					connexion.close();  
 				}
-			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo List video name");
+			} 
+			catch (SQLException e) {
+				throw new DaoException("[Erreur SubtileInfoDaoImpl  videoNameLister] Impossible de communiquer avec la base de données");
 			}
 		}
 		return videoNames;
 	}
 
-
+	
+	//Récupérer les noms des tables
 	public List<String> tableNameLister() throws DaoException, BeanException {
 		List<String> tableNames = new ArrayList<String>();
 		Connection connexion = null;
 		ResultSet result = null;
+		
 		try {
 			connexion = daoFactory.getConnection();
 			DatabaseMetaData md = connexion.getMetaData();
@@ -180,8 +194,9 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 			while (result.next()) {
 				tableNames.add(result.getString(3));
 			}
+			
 		} catch (SQLException e) {
-			throw new DaoException("Impossible de manipuler  la base de données :: subtitleInfo list table name");
+			throw new DaoException("[Erreur SubtileInfoDaoImpl  tableNameLister] Impossible de de lister les données");
 		}
 		finally {
 			try {
@@ -189,12 +204,14 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 					connexion.close();  
 				}
 			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo list table name");
+				throw new DaoException("[Erreur SubtileInfoDaoImpl  tableNameLister] Impossible de communiquer avec la base de données");
 			}
 		}
 		return tableNames;
 	}
 
+	
+	//Générer un nom de tableau
 	public String generateTableName(String name){
 		String sampleAlphabet = name.replaceAll("[^A-Za-z]+", "").toLowerCase();
 		Random random = new Random();
@@ -204,27 +221,30 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 		return new String(buf);
 	}
 
+	//Gestion des fichiers uploadés
 	public String managePart(Part part) throws IOException{
 		String fileName = FileHandler.getFileName(part);
-		//Move file
 		String filePathAndName=FileHandler.writeFile(part, fileName);
 		return filePathAndName;
 	}
 
+	
+	// sauvegardes des informations
 	public SubtitleInfo getSubtitleInfoFromId(int id) throws BeanException, DaoException{
 		SubtitleInfo subtitleInfo= new SubtitleInfo();
 		Connection connexion = null;
 		Statement statement = null;
 		ResultSet result = null;
 		PreparedStatement preparedStatement = null;
+		
 		try {
 			connexion = daoFactory.getConnection();
 			statement = connexion.createStatement();
 			preparedStatement = connexion.prepareStatement("SELECT * FROM subtitle_info Where id= ?;");
 			preparedStatement.setInt(1, id);
 			result = preparedStatement.executeQuery();
+			
 			while (result.next()) {
-
 				String nameVideo = result.getString("name_video");
 				String vo = result.getString("vo");
 				String nameEn = result.getString("name_en");
@@ -238,6 +258,7 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 				String namePt = result.getString("name_pt");
 				boolean finishedPt =result.getBoolean("finished_pt");					
 				String tableName =result.getString("table_name");
+				
 				subtitleInfo.setId(id);
 				subtitleInfo.setFinishedEn(finishedEn);	
 				subtitleInfo.setNameEn(nameEn);
@@ -253,11 +274,10 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 				subtitleInfo.setNameVideo(nameVideo);
 				subtitleInfo.setTableName(tableName);
 				subtitleInfo.setVo(vo);
-
-
 			}
+			
 		} catch (SQLException e) {
-			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo List");
+			throw new DaoException("[Erreur SubtileInfoDaoImpl  getSubtitleInfoFromId] Impossible de de lister les données");
 		}
 		finally {
 			try {
@@ -265,13 +285,14 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 					connexion.close();  
 				}
 			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo List");
+				throw new DaoException("[Erreur SubtileInfoDaoImpl  getSubtitleInfoFromId] Impossible de communiquer avec la base de données");
 			}
 		}
 		return subtitleInfo;
 	}
 
-	@Override
+	
+	//Récupérer le noms du sous titres en fonction de la langue
 	public String getNameFromLanguage(SubtitleInfo subtitleInfo, String language) {
 		switch(language){
 		case "en":
@@ -287,20 +308,21 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 		default: return null;
 
 		}
-
 	}
 
-	@Override
-	public String getNameFromIdLanguage(int id, String language) throws DaoException {
 
+	//Récupérer le nom de la langue à partir d'un identidant et d'un langue
+	public String getNameFromIdLanguage(int id, String language) throws DaoException {
 		Connection connexion = null;
 		Statement statement = null;
 		ResultSet result = null;
 		PreparedStatement preparedStatement = null;
 		String name=null;
+		
 		try {
 			connexion = daoFactory.getConnection();
 			statement = connexion.createStatement();
+			
 			switch(language){
 			case "en":
 				preparedStatement = connexion.prepareStatement("SELECT name_en as name FROM subtitle_info Where id= ?;");
@@ -327,9 +349,8 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 				name = result.getString("name");
 			}
 
-
 		} catch (SQLException e) {
-			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo List");
+			throw new DaoException("[Erreur SubtileInfoDaoImpl  getNameFromIdLanguage] Impossible de de lister les données");
 		}
 		finally {
 			try {
@@ -337,18 +358,22 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 					connexion.close();  
 				}
 			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo List");
+				throw new DaoException("[Erreur SubtileInfoDaoImpl  getNameFromIdLanguage] Impossible de communiquer avec la base de données");
 			}
 		}
 		return name;
 	}
 
-	@Override
+
+	//mise à jour du nom des sous titres d'une langues 
 	public void updateNameFromIdLanguage(int id, String name, String language) throws DaoException {
 		Connection connexion = null;
 		PreparedStatement preparedStatement = null;
+		
 		try {
+			
 			connexion = daoFactory.getConnection();
+			
 			switch(language){
 			case "en":
 				preparedStatement = connexion.prepareStatement("Update subtitle_info SET name_en=? Where ID= ?;");
@@ -367,22 +392,21 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 				break;
 			}
 
-
 			preparedStatement.setString(1, name);
 			preparedStatement.setInt(2, id);
-			System.out.println(preparedStatement);
+			
 			preparedStatement.executeUpdate();
+			
 			connexion.commit();
-
-
-		} catch (SQLException e) {
+		}  
+		catch (SQLException e) {
 			try {
 				if (connexion != null) {
 					connexion.rollback();
 				}
 			} catch (SQLException e2) {
 			}
-			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo add");
+			throw new DaoException("[Erreur SubtileInfoDaoImpl  updateNameFromIdLanguage] Impossible de modifier les données");
 		}
 		finally {
 			try {
@@ -390,17 +414,21 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 					connexion.close();  
 				}
 			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo add");
+				throw new DaoException("[Erreur SubtileInfoDaoImpl  updateNameFromIdLanguage] Impossible de communiquer avec la base de données");
 			}
 		}
 
 	}
+
 	
+	// mise à jour de l'état de la traduction
 	public void updateFinishFromIdLanguage(int id, Boolean state, String language)throws DaoException {
 		Connection connexion = null;
 		PreparedStatement preparedStatement = null;
+		
 		try {
 			connexion = daoFactory.getConnection();
+			
 			switch(language){
 			case "en":
 				preparedStatement = connexion.prepareStatement("Update subtitle_info SET finished_en=? Where ID= ?;");
@@ -419,22 +447,22 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 				break;
 			}
 
-
 			preparedStatement.setBoolean(1, state);
 			preparedStatement.setInt(2, id);
-			System.out.println(preparedStatement);
+
 			preparedStatement.executeUpdate();
+			
 			connexion.commit();
 
-
-		} catch (SQLException e) {
+		} 
+		catch (SQLException e) {
 			try {
 				if (connexion != null) {
 					connexion.rollback();
 				}
 			} catch (SQLException e2) {
 			}
-			throw new DaoException("Impossible de manipuler la base de données :: subtitleInfo add");
+			throw new DaoException("[Erreur SubtileInfoDaoImpl  updateFinishFromIdLanguage] Impossible de modifier les données");
 		}
 		finally {
 			try {
@@ -442,7 +470,7 @@ public class SubtitleInfoDaoImpl implements SubtitleInfoDao {
 					connexion.close();  
 				}
 			} catch (SQLException e) {
-				throw new DaoException("Impossible de communiquer avec la base de données :: subtitleInfo add");
+				throw new DaoException("[Erreur SubtileInfoDaoImpl  updateFinishFromIdLanguage] Impossible de communiquer avec la base de données");
 			}
 		}
 
