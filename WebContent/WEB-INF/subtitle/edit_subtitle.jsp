@@ -33,7 +33,7 @@
 						<c:out value="Nom de la version originale: ${nameRef }" />
 					</h2>
 					<h3>
-						<c:out value="code de la langue : ${languageRef }" />
+						<c:out value="Tag langue : ${languageRef }" />
 					</h3>
 				</td>
 				<td><h2><c:out value="Nom de la traduction: " /> <input type="text"
@@ -41,7 +41,7 @@
 					value="${empty nameTarget ? 'non défini' : nameTarget }" />
 					</h2>
 					<h3>
-						<c:out value="code de la langue : ${languageTarget }" />
+						<c:out value="Tag langue : ${languageTarget }" />
 					</h3></td>
 			</tr>
 			<c:forEach items="${ ids }" var="id" varStatus="status">

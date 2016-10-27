@@ -1,17 +1,37 @@
-@CHARSET "UTF-8"";
-
-
-
+@CHARSET "UTF-8" ";
 
 ul#menu {
-list-style-type : none;
-
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+/*     overflow: hidden; */
 }
-ul#menu li { 
-display : inline;
-padding : 0 0.5em; 
 
+ul#menu li {
+	 float: left;
+	display: inline;
+	padding: 0 0.5em;
+	Font-Weight: Bold;
+	background-color: #555555;
+    
 }
+
+
+ul#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul#menu li a:hover {
+	background-color: #090;
+	color:white;
+}
+
+
+
 h1 {
 	color: #090;
 }
@@ -22,4 +42,67 @@ h2 {
 
 h3 {
 	color: #555555;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th.title{
+text-align:center;	
+}
+th.subtitle{
+text-align:center;	
+}
+
+td.edit{
+text-align:left;	
+}
+td.dl{
+text-align:center;	
+}
+
+
+tr:nth-child(even){background-color: #fffcfc}
+
+th {
+    background-color: #090;
+    color: white;
+    
+}
+
+form#addSub label {
+	color: #0b5f07;
+	Font-Weight: Bold;
+}
+
+
+form#addSub label.radioBut {
+	color: #555555;
+	Font-Weight: Bold;
+}
+
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(7, 18, 146, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(7, 18, 146, 1);
 }
