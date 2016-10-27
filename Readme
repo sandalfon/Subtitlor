@@ -1,0 +1,15 @@
+
+ Merci de bien vouloir adapter les informations de connections dans : com.subtitlor.dao.DaoFactory
+  	Pour la connection à la base de donnée
+Merci de bien vouloir changer les chemins dans com.subtitlor.utilities.FileHandler.java : FILE_PATH et TMP_PATH
+	Pour l'upload/download des fichiers
+Merci de bien vouloir changer le chemin dans WebContent.WEB-INF.web.xml : location
+		Pour l'upload/download des fichiers
+Dans le dossier DB/sql_back : le backup de la base sql
+Dans le dossier DB/workbench : le schema de la base de donnée
+Dans le dossier WebContent/WEB-INF/data : des sous-titres 
+	 attention le sous-titres SILICON.VALLEY ne sont pas en utf-8, fichier de test pour les caractères \r\n
+/!\ Parfois il est nécessaire de reimporter le jar servlet-api.jar de tomcat dans le buildpath car il est défini en chemin absolu
+
+Testé sur TomCat 9.0 et Mysql 5.6.17
+    

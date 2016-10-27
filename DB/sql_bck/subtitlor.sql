@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 26 Octobre 2016 à 15:16
+-- Généré le :  Jeu 27 Octobre 2016 à 11:32
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -536,7 +536,7 @@ INSERT INTO `llinoeiayyll_fr` (`id`, `start`, `end`, `en`, `fr`, `al`, `es`, `pt
 (2, '00:00:31,960', '00:00:33,155', 'You fucking bastards', 'Bandes d''enfoirs.', NULL, NULL, NULL),
 (3, '00:00:37,800', '00:00:39,792', 'It''s amazing, Here', 'C''est incroyable, ici.', NULL, NULL, NULL),
 (4, '00:00:40,480', '00:00:41,994', 'Goolybib damn''it', 'Goolybib, putain.', NULL, NULL, NULL),
-(5, '00:00:42,160', '00:00:45,471', '', 'Ils pondent un pauvre logiciel\r\nqui risque d''?tre utile un jour', NULL, NULL, NULL),
+(5, '00:00:42,160', '00:00:45,471', 'they are making a shity soft which will be usefull one day', 'Ils pondent un pauvre logiciel\r\nqui risque d''?tre utile un jour', NULL, NULL, NULL),
 (6, '00:00:45,640', '00:00:47,154', '', 'et maintenant, ils vivent ici.', NULL, NULL, NULL),
 (7, '00:00:47,600', '00:00:50,513', '', 'Il pleut du fric ? Silicon Valley,\r\nmais pas sur nous.', NULL, NULL, NULL),
 (8, '00:00:51,680', '00:00:54,320', '', '- C''est quoi, ce truc ?\r\n- Crevette liquide.', NULL, NULL, NULL),
@@ -1101,7 +1101,7 @@ CREATE TABLE IF NOT EXISTS `subtitle_info` (
 --
 
 INSERT INTO `subtitle_info` (`ID`, `name_video`, `vo`, `table_name`, `name_en`, `finished_en`, `name_fr`, `finished_fr`, `name_al`, `finished_al`, `name_es`, `finished_es`, `name_pt`, `finished_pt`) VALUES
-(2, 'Silicon.Valley.S01E01', 'fr', 'llinoeiayyll_fr', 'Silicon.Valley.S01E01VEn', 0, 'Silicon.Valley.S01E01VF', 1, '', 0, '', 0, '', 0),
+(2, 'Silicon.Valley.S01E01', 'fr', 'llinoeiayyll_fr', 'Silicon.Valley.S01E01VEn', 1, 'Silicon.Valley.S01E01VF', 1, '', 0, '', 0, '', 0),
 (3, 'password presentation', 'fr', 'deorewrnsnan_fr', '', 0, 'password_presentationVF', 1, '', 0, '', 0, '', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

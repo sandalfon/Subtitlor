@@ -16,31 +16,30 @@
 	<h1>Les sous-titres</h1>
 	</p>
 	<p>
-	<h3>Un sous titre doit avoir un nom pour pouvoir être téléchargé</h3>
+	<h3>Un sous titre doit avoir un Titre pour pouvoir être téléchargé</h3>
 	</p>
 	<form method="post" action="subtitles">
 		<table id="tableSubTitle" style="width: 100%">
 			<tr>
-				<th rowspan="2" style="text-align: left;">Nom de la video</th>
-				<th rowspan="2" style="text-align: left;">Sous-titre Original</th>
-				<th colspan="2" style="text-align: left;">Anglais</th>
-				<th colspan="2" style="text-align: left;">Français</th>
-				<th colspan="2" style="text-align: left;">Allemand</th>
-				<th colspan="2" style="text-align: left;">Espagnol</th>
-				<th colspan="2" style="text-align: left;">Portugais</th>
+				<th rowspan="2" class="title">Nom de la video</th>
+				<th rowspan="2" class="title">Langue du sous-titre <br> Original</th>
+				<th class="title" colspan="2">Anglais</th>
+				<th colspan="2" class="title">Français</th>
+				<th colspan="2" class="title">Allemand</th>
+				<th colspan="2" class="title">Espagnol</th>
+				<th colspan="2" class="title">Portugais</th>
 			</tr>
 			<tr>
-				<th style="text-align: left;">Nom</
-				<th>
-				<th style="text-align: left;">Etat</th>
-				<th style="text-align: left;">Nom</th>
-				<th style="text-align: left;">Etat</th>
-				<th style="text-align: left;">Nom</th>
-				<th style="text-align: left;">Etat</th>
-				<th style="text-align: left;">Nom</th>
-				<th style="text-align: left;">Etat</th>
-				<th style="text-align: left;">Nom</th>
-				<th style="text-align: left;">Etat</th>
+				<th class="subtitle">Titre</th>
+				<th class="subtitle">Etat</th>
+				<th class="subtitle">Titre</th>
+				<th class="subtitle">Etat</th>
+				<th class="subtitle">Titre</th>
+				<th class="subtitle">Etat</th>
+				<th class="subtitle">Titre</th>
+				<th class="subtitle">Etat</th>
+				<th class="subtitle">Titre</th>
+				<th class="subtitle">Etat</th>
 			</tr>
 			<c:forEach var="subtitleInfo" items="${subtitleInfos}">
 				<tr>
@@ -51,9 +50,6 @@
 								<c:out value="Anglais" />
 							</c:when>
 							<c:when test="${subtitleInfo.vo == 'fr' }">
-								<c:out value="Anglais" />
-							</c:when>
-							<c:when test="${subtitleInfo.vo == 'en' }">
 								<c:out value="Français" />
 							</c:when>
 							<c:when test="${subtitleInfo.vo == 'al' }">
@@ -96,46 +92,46 @@
 							value="${ subtitleInfo.finishedPt ? 'Fini' : 'En cours' }" /></td>
 				</tr>
 				<tr>
-					<td>
+
+					<td class="dl"><button name="selectedButton" type="submit"
+							value="dl_en_${ subtitleInfo.id}"
+							${ empty subtitleInfo.nameEn ? 'disabled' : ''}>Télécharger</button></td>
+					<td class="edit">
 						<button name="selectedButton" type="submit"
 							value="edit_en_${ subtitleInfo.id}">edit</button>
 					</td>
 
-					<td><button name="selectedButton" type="submit"
-							value="dl_en_${ subtitleInfo.id}"
-							${ empty subtitleInfo.nameEn ? 'disabled' : ''}>Télécharger</button></td>
-					<td>
+					<td class="dl"><button name="selectedButton" type="submit"
+							value="dl_fr_${ subtitleInfo.id}"
+							${ empty subtitleInfo.nameFr ? 'disabled' : ''}>Télécharger</button></td>
+					<td class="edit">
 						<button name="selectedButton" type="submit"
 							value="edit_fr_${ subtitleInfo.id}">edit</button>
 					</td>
 
-					<td><button name="selectedButton" type="submit"
-							value="dl_fr_${ subtitleInfo.id}"
-							${ empty subtitleInfo.nameFr ? 'disabled' : ''}>Télécharger</button></td>
-					<td>
-						<button name="selectedButton" type="submit"
-							value="edit_al_${ subtitleInfo.id}">edit</button>
-					</td>
-
-					<td><button name="selectedButton" type="submit"
+					<td class="dl"><button name="selectedButton" type="submit"
 							value="dl_al_${ subtitleInfo.id}"
 							${ empty subtitleInfo.nameAl ? 'disabled' : ''}>Télécharger</button></td>
-					<td>
+					<td class="edit">
+						<button name="selectedButton" type="submit"
+							value="edit_al_${ subtitleInfo.id}" class="edit">edit</button>
+					</td>
+
+					<td class="dl"><button name="selectedButton" type="submit"
+							value="dl_es_${ subtitleInfo.id}"
+							${ empty subtitleInfo.nameEs ? 'disabled' : ''}>Télécharger</button></td>
+					<td class="edit">
 						<button name="selectedButton" type="submit"
 							value="edit_es_${ subtitleInfo.id}">edit</button>
 					</td>
 
-					<td><button name="selectedButton" type="submit"
-							value="dl_es_${ subtitleInfo.id}"
-							${ empty subtitleInfo.nameEs ? 'disabled' : ''}>Télécharger</button></td>
-					<td>
+					<td class="dl"><button name="selectedButton" type="submit"
+							value="dl_pt_${ subtitleInfo.id}"
+							${ empty subtitleInfo.namePt ? 'disabled' : ''}>Télécharger</button></td>
+					<td class="edit">
 						<button name="selectedButton" type="submit"
 							value="edit_pt_${ subtitleInfo.id}">edit</button>
 					</td>
-
-					<td><button name="selectedButton" type="submit"
-							value="dl_pt_${ subtitleInfo.id}"
-							${ empty subtitleInfo.namePt ? 'disabled' : ''}>Télécharger</button></td>
 				</tr>
 			</c:forEach>
 
